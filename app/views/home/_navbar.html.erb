@@ -1,0 +1,57 @@
+<div class="groups orderDetails general-cover" style="height: 120%;">
+
+  <!-- end navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="">
+        <%= image_tag("logo4.png" , width: 100) %>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Friends</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="groups.html">Groups</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Orders</a>
+          </li>
+
+
+          <li class="nav-item" id="noti_Container">
+            <a>
+              <div id="noti_Counter"></div>
+              <!--SHOW NOTIFICATIONS COUNT.-->
+
+              <!--A CIRCLE LIKE BUTTON TO DISPLAY NOTIFICATION DROPDOWN.-->
+
+              <i class="fa fa-bell fa-lg"></i>
+
+              <!--THE NOTIFICAIONS DROPDOWN BOX.-->
+              <div id="notifications">
+                <h3>Notifications</h3>
+                <div style="height:300px;"></div>
+                <!--noti. content-->
+                <div class="seeAll"><a href="notifications.html">See All</a></div>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+        <div class="nav-right-side my-2 my-lg-0">
+          <a href="#"><img src="images/character.png" width="35" class="mr-2" /></a>
+          <a href="#">Username</a>
+          <a href="#" class="ml-3"><%= link_to "Log Out", destroy_user_session_path, method: :delete %></a>
+        </div>
+      </div>
+
+    </div>
+  </nav>

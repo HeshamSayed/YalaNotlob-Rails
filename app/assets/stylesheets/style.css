@@ -1,6 +1,7 @@
 /****************** Amal ***************/
 .bg-body{
-  background-image: url("images/cover1.jpg");
+    background-image: url('assets/images/cover1.jpg');
+
   height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
