@@ -60,7 +60,8 @@
         <h2>Let's start to order food now!</h2>
 
         <div class="secondary-btn">
-          <a href="signup" role="button" class="btn btn-outline-danger">Register Now</a>
+          <%= link_to 'Register' , registration_path(:user)+"/sign_up", role:"button" , class:"btn btn-outline-danger" %>
+
         </div>
       </div>
 
