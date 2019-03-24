@@ -14,12 +14,9 @@ gem 'sass-rails', '~> 5.0'
 #Devise lib for authentication users
 gem 'devise'
 # Use Uglifier as compressor for JavaScript assets
-<<<<<<< HEAD
-=======
 #for uploading images
 gem 'carrierwave', '~> 1.0'
 
->>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
