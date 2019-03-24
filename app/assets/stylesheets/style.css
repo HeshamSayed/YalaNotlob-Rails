@@ -1,8 +1,12 @@
 /****************** Amal ***************/
 .bg-body{
+<<<<<<< HEAD
+  background-image: url("images/cover1.jpg");
+=======
     background-image: url(/assets/cover1.jpg);
     
 
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
   height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
@@ -393,6 +397,12 @@ legend
 /*=============== end add order style ==========*/
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+/****************** Amal **************/
+=======
+>>>>>>> 3cd3b6aa4d8877398a8c4fe52ac3107fa5bca8e8
 /****************** Amal **************/
 
 
@@ -658,3 +668,7 @@ p{
 }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
+>>>>>>> 3cd3b6aa4d8877398a8c4fe52ac3107fa5bca8e8

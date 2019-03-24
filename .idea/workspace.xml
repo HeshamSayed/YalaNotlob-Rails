@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="5b1df3c0-0359-46a4-becb-4a69410323ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/app/views/home/_navbar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/_navbar.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/homepage/homeindex.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/homepage/homeindex.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -20,6 +25,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/application_record.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+=======
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_DATA_SOURCES" value="true" />
@@ -41,47 +55,88 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="163">
               <caret line="74" column="2" lean-forward="true" selection-start-line="74" selection-start-column="2" selection-end-line="74" selection-end-column="2" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+=======
         <entry file="file://$PROJECT_DIR$/app/views/users/sessions/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="337">
               <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/config/application.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+=======
         <entry file="file://$PROJECT_DIR$/app/views/users/registrations/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="66">
               <caret line="2" column="64" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="64" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="6" selection-end-line="6" />
+=======
         <entry file="file://$PROJECT_DIR$/app/views/users/shared/_links.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+=======
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="33">
               <caret line="1" column="2" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="37" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/.ruby-version">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/friend.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+=======
         <entry file="file://$PROJECT_DIR$/app/views/home/_navbar.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="132">
@@ -95,10 +150,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="215">
               <caret line="7" column="16" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="16" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/group.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+=======
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/homepage/homeindex.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -107,30 +170,47 @@
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/app/models/groups_orders_user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+=======
         <entry file="file://$PROJECT_DIR$/app/views/users/registrations/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="33">
               <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/app/models/groups_user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+=======
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="99">
               <caret line="3" selection-start-line="3" selection-end-line="3" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+<<<<<<< HEAD
+=======
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -138,12 +218,24 @@
       </list>
     </option>
   </component>
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/app/views/users/sessions/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/users/shared/_error_messages.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/users/shared/_links.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/users/sessions_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/groups_user.rb" />
+        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+=======
         <option value="$PROJECT_DIR$/app/views/users/shared/_error_messages.html.erb" />
         <option value="$PROJECT_DIR$/app/models/groups_user.rb" />
         <option value="$PROJECT_DIR$/app/views/orders/index.html.erb" />
@@ -160,6 +252,7 @@
         <option value="$PROJECT_DIR$/app/views/home/_navbar.html.erb" />
         <option value="$PROJECT_DIR$/app/views/homepage/homeindex.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
       </list>
     </option>
   </component>
@@ -174,7 +267,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+      <pane id="RailsProjectView" />
+=======
       <pane id="Scope" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -191,6 +288,8 @@
               <item name="YalaNotlob-Rails" type="b2602c69:ProjectViewProjectNode" />
               <item name="YalaNotlob-Rails" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -211,6 +310,7 @@
               <item name="YalaNotlob-Rails" type="b2602c69:ProjectViewProjectNode" />
               <item name="YalaNotlob-Rails" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -230,6 +330,8 @@
               <item name="YalaNotlob-Rails" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
               <item name="details" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -237,6 +339,7 @@
               <item name="YalaNotlob-Rails" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
               <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -244,6 +347,8 @@
               <item name="YalaNotlob-Rails" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
               <item name="homepage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -251,6 +356,7 @@
               <item name="YalaNotlob-Rails" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -263,6 +369,8 @@
             <path>
               <item name="YalaNotlob-Rails" type="b2602c69:ProjectViewProjectNode" />
               <item name="YalaNotlob-Rails" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="users" type="462c0819:PsiDirectoryNode" />
@@ -287,6 +395,7 @@
             <path>
               <item name="YalaNotlob-Rails" type="b2602c69:ProjectViewProjectNode" />
               <item name="YalaNotlob-Rails" type="462c0819:PsiDirectoryNode" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -295,17 +404,24 @@
               <item name="config" type="462c0819:PsiDirectoryNode" />
               <item name="environments" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+=======
             <path>
               <item name="YalaNotlob-Rails" type="b2602c69:ProjectViewProjectNode" />
               <item name="YalaNotlob-Rails" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
               <item name="initializers" type="462c0819:PsiDirectoryNode" />
             </path>
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
+      <pane id="Scope" />
+=======
       <pane id="RailsProjectView" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -437,21 +553,33 @@
       <workItem from="1553075749183" duration="1591000" />
       <workItem from="1553158213657" duration="116000" />
       <workItem from="1553158411666" duration="1328000" />
+<<<<<<< HEAD
+      <workItem from="1553176196071" duration="8915000" />
+=======
       <workItem from="1553176196071" duration="10790000" />
       <workItem from="1553272140860" duration="3402000" />
       <workItem from="1553284427460" duration="4399000" />
       <workItem from="1553350137022" duration="10804000" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="11950000" />
+=======
     <option name="totallyTimeSpent" value="32430000" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1366" height="706" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2412481" />
+=======
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16894977" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -464,11 +592,19 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.14678898" />
+=======
       <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.25688073" />
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+<<<<<<< HEAD
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+=======
       <window_info anchor="right" id="Database" order="3" weight="0.32952815" />
     </layout>
     <layout-to-restore>
@@ -492,6 +628,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.32952815" />
     </layout-to-restore>
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -510,6 +647,26 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/users/passwords_controller.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/controllers/users/registrations_controller.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
     <entry file="file://$PROJECT_DIR$/app/views/users/confirmations/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -535,6 +692,16 @@
     <entry file="file://$PROJECT_DIR$/app/views/users/passwords/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/views/users/sessions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
     <entry file="file://$PROJECT_DIR$/app/views/users/shared/_error_messages.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
@@ -542,9 +709,32 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/views/users/shared/_links.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users/sessions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/notification.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/order.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/app/models/notification.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
     <entry file="file://$PROJECT_DIR$/db/migrate/20190320035145_create_groups.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -566,6 +756,16 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
     <entry file="file://$PROJECT_DIR$/config.ru">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -601,6 +801,33 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/models/friend.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.ruby-version">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/application_record.rb">
+=======
     <entry file="file://$PROJECT_DIR$/app/models/application_record.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
@@ -732,12 +959,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+=======
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
@@ -794,6 +1035,7 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
         </state>
       </provider>
     </entry>
