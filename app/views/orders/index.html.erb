@@ -1,0 +1,19 @@
+<h1> All Orders <h1>
+<table>
+    <tr>
+        <th> Meal </th>
+        <th> Restaurant </th>
+        <th> MenuImage </th>
+        <th> Status </th>
+        <th></th>
+    </tr>
+    <% @orders.each do |order| %>
+        <tr>
+            <td><%= order.meal %></td>
+            <td><%= order.restaurant_name %></td>
+            <td><%= order.menu_image %></td>
+            <td><%= order.status %></td>
+            <td><%= link_to 'Show Details', order_details_path(order) %></td>
+        </tr>
+    <% end %>
+</table>

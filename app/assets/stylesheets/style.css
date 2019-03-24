@@ -1,0 +1,394 @@
+/****************** Amal ***************/
+.bg-body{
+  background-image: url("images/cover1.jpg");
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+.general-cover{
+  background-color: #171717d4;
+  width: 100%;
+  
+}
+/*=============== navbar style =========*/
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.navbar {
+    padding: 0;
+    height: 85px;
+    background-color: #ffffff8f!important;
+}
+.navbar-light .navbar-nav .nav-link{
+  color: white;
+}
+.navbar .nav-link > .fa {
+  position: relative;
+  width: 36px;
+  font-size: 24px;
+}
+
+@media (min-width: 576px) {
+.navbar .nav-link {
+    text-align: center;
+    display: table-cell;
+    height: 70px;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+.navbar .nav-link {
+    text-align: center;
+    display: table-cell;
+    height: 70px;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+.navbar .nav-link {
+    text-align: center;
+    display: table-cell;
+    height: 70px;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+}
+
+@media (min-width: 1200px) {
+.navbar .nav-link {
+    text-align: center;
+    display: table-cell;
+    height: 70px;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+.navbar .nav-item .nav-link:hover{
+ color: #d44435;
+}
+
+.navbar .nav-right-side a{
+    text-decoration: none;
+    color: white;
+}
+.navbar .nav-right-side a:hover{
+    color: #d44435;
+}
+}
+/*=============== navbar style =========*/
+
+/*=============== notification =========*/
+#noti_Container {
+  position:relative;
+  margin-left: 470px;
+  margin-top: 30px;
+}
+ 
+/* A CIRCLE LIKE BUTTON IN THE TOP MENU. */
+.nav-item .fa-bell {
+  width:22px;
+  height:22px;
+  line-height:22px;
+  border-radius:50%;
+  -moz-border-radius:50%; 
+  -webkit-border-radius:50%;
+  margin:-3px 10px 0 10px;
+  cursor:pointer;
+  background-color: transparent!important;
+  color: white!important;
+}
+  
+/* THE POPULAR RED NOTIFICATIONS COUNTER. */
+.nav-item #noti_Counter {
+  display:block;
+  position:absolute;
+  background:#E1141E;
+  color:#FFF;
+  font-size:12px;
+  font-weight:normal;
+  padding:1px 3px;
+  margin:-8px 0 0 25px;
+  border-radius:2px;
+  -moz-border-radius:2px; 
+  -webkit-border-radius:2px;
+  z-index:1;
+}
+  
+/* THE NOTIFICAIONS WINDOW. THIS REMAINS HIDDEN WHEN THE PAGE LOADS. */
+.nav-item #notifications {
+  display:none;
+  width:333px;
+  position:absolute;
+  top:30px;
+  left:0;
+  background:#FFF;
+  border:solid 1px rgba(100, 100, 100, .20);
+  z-index: 5;
+}
+/* AN ARROW LIKE STRUCTURE JUST OVER THE NOTIFICATIONS WINDOW */
+.nav-item #notifications:before {         
+  content: '';
+  display:block;
+  width:0;
+  height:0;
+  color:transparent;
+  border:10px solid #CCC;
+  border-color:transparent transparent #FFF;
+  margin-top:-20px;
+  margin-left:10px;
+}
+  
+.nav-item h3 {
+  display:block;
+  color:#333; 
+  background:#FFF;
+  font-weight:bold;
+  font-size:13px;    
+  padding:8px;
+  margin:0;
+  border-bottom:solid 1px rgba(100, 100, 100, .30);
+}
+  
+.nav-item .seeAll {
+  background:#F6F7F8;
+  padding:8px;
+  font-size:12px;
+  font-weight:bold;
+  border-top:solid 1px rgba(100, 100, 100, .30);
+  text-align:center;
+}
+.nav-item .seeAll a {
+  color:#3b5998;
+}
+.nav-item .seeAll a:hover {
+  background:#F6F7F8;
+  color:#3b5998;
+  text-decoration:underline;
+}
+/*=============== notification =========*/
+
+/*=============== slider style =========*/
+.bg-cover .cd-fixed-bg {  
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+.bg-cover .cd-fixed-bg h1,h2{
+  color: #FFF;
+  z-index: 10;
+  position: relative;
+  padding-left: 150px;
+  padding-top: 20px;
+}
+.bg-cover .cd-fixed-bg h1{
+  padding-top: 120px;
+}
+.bg-cover .cd-fixed-bg.cd-fixed-bg--1 {
+    background-image: url("images/cover1.jpg");
+  }
+  
+  .cd-scrolling-bg {
+    min-height: 100%;
+  }
+
+  .hilight {
+    background-color: rgba(0,0,0,0.65);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-family: Verdana, Geneva, sans-serif;
+    color: #FFF;
+    bottom: -85px;
+    z-index: 1;
+   }
+
+.secondary-btn{
+    margin-top: 35px;
+    position: relative;
+    z-index: 2;
+    padding-left: 150px;
+  }
+
+.btn-outline-danger {
+  color: #ffffff;
+  border-color: #ffffff;
+  width: 170px
+}
+/*=============== slider style =========*/
+
+/*=============== groups style ==========*/
+.form-control{
+  background-color: #d4d4d4;
+}
+fieldset 
+{
+  border: 1px solid #ddd !important;
+  margin: 0;
+  min-width: 0;
+  padding: 10px;       
+  position: relative;
+  border-radius:4px;
+  background-color:#000000ad;
+  padding-left:10px!important;
+}
+
+legend
+  {
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom: 0px; 
+    width: 50%; 
+    border: 1px solid #ddd;
+    border-radius: 4px; 
+    padding: 5px 5px 5px 10px; 
+    background-color: #ffffff;
+  }
+  .span4 img {
+    margin-right: 10px;
+}
+.span4 .img-left {
+    float: left;
+}
+.span4 .img-right {
+    float: right;
+}
+.panel-container{
+  overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 240px;
+    min-height: 330px;
+    padding: 20px;
+}
+.panel-container ul li a{
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+.panel-container ul {
+  list-style-type: none;
+}
+.fa-trash {
+  color: #c10d00;
+}
+.panel-container ul li a:hover{
+  color: #c10d00;
+  text-decoration: none;
+}
+.groups h1 {
+  color: #dc4443;
+}
+.btn-outline-secondary{
+  color: #c10d00;
+  border-color: #c10d00;
+}
+.btn-outline-secondary:hover{
+  color: white;
+  border-color: rgb(236, 236, 236);
+}
+/*=============== end groups style ==========*/
+
+/*=============== start add order style ==========*/
+.orderDetails table{
+  color: #FFF;
+}
+.source-padal a {
+  text-align: center;
+  color: aliceblue;
+}
+.orderDetails .span4 a{
+  color: #c10d00;
+}
+.form-group span{
+  color: #FFF;
+}
+.col-4 label{
+  color: aliceblue;
+  max-width: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+
+#img-upload{
+  width: 100%;
+}
+
+.fiends-invited{
+  background-color: #65656575;
+  padding: 25px;
+  color: azure;
+  height: fit-content;
+  max-height: 285px;
+  overflow-y: scroll;
+}
+.fiends-invited h4{
+  margin: auto;
+  padding-bottom: 20px;
+  color: #4CAF50;
+  font-weight: bold;
+}
+.bootstrap-tagsinput {
+  background: #d4d4d4!important;
+  width: 100%!important;
+}
+
+.bootstrap-tagsinput .tag {
+  color: #dc4443!important;
+}
+/*=============== end add order style ==========*/
+
+/*=============== start add order style ==========*/
+.notification-container{
+  min-height: 560px;
+  max-height: 560px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #333333bf;
+  margin: 0 auto;
+  color: #f2f2f2;
+}
+
+.notification-container h2{
+  text-align: center;
+  padding-left: 0px;
+}
+.notification-container ul {
+  list-style-type:none;
+}
+.notification-container li{
+  margin-top: 50px;
+}
+/*=============== end add order style ==========*/
+
+
+/****************** Amal **************/

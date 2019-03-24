@@ -1,0 +1,2 @@
+class GroupsOrdersUser < ApplicationRecord
+end
