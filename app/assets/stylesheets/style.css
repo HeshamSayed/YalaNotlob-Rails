@@ -394,3 +394,267 @@ legend
 
 
 /****************** Amal **************/
+
+
+/************************* fatema *******************/
+.login-form {
+  background: #eeeaead2;
+  width: 35em;
+  margin: 2em auto;
+  overflow: hidden;
+  position: relative;
+  
+}
+  
+  div.heading {
+    background: #f85f64e0;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 1.5em;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+  }
+  
+  div.left {
+    width: 50%;
+    float: left;
+    padding: 1.7em 1.5em 2.5em 1.5em;
+  
+  }
+  div.sform {
+    width: 50%;
+    float: left;
+    padding-left: 150px;;
+  
+  }
+  
+  div.right {
+    width: 50%;
+    float: right;
+    padding: 1.7em 1.5em 2.5em 1.5em;
+   
+  }
+  
+  
+  input[type="email"], input[type="password"],input[type="text"] {
+    border:none;
+    border-radius:5px;
+    padding: 1em;
+    margin: 0.6em 0;
+   
+ 
+   
+  }
+  
+  input[type="submit"] {
+    background: #06994fc9;
+    color: #fff;
+    outline: none;
+    text-transform: uppercase;
+    padding: 0 20px;
+    overflow: hidden;
+    align-items: center;
+    letter-spacing: 0.1em;
+    margin: 0.5em 0;
+    font-weight: bold;
+    border:none;
+    border-radius: 25px;
+    min-width: 160px;
+    height: 50px;
+    line-height: 1.2;
+    font-family: SourceSansPro-SemiBold;
+}
+
+
+  
+  div.connect {
+    color: gray;
+    font-size: 1.1em;
+    text-align: center;
+  }
+  
+  a {
+    display: inline-block;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+    width: 7em;
+   
+    clear: both;
+    text-align: center; 
+    min-width: 160px;
+    height: 50px;
+   
+  }
+  
+  a.facebook {
+    background: #3772f3b0;
+    margin-top: 0.8em;
+    color:#fff;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0.55em 0.3em;
+      
+    margin: 0.5em 0.1em;
+    
+  }
+
+  a.google {
+    background: #ee4e48d7;
+    font-family: 'Courier New', Courier, monospace;
+    color:#fff;
+    padding: 0.55em 0.3em;
+      
+    margin: 0.5em 0.1em;
+}
+.login100-form-title {
+    display: block;
+    font-family: SourceSansPro-Bold;
+    font-size: 25px;
+    color: #1b0d1f;
+    line-height: 1.2;
+    text-align: center;
+  }
+ .label{
+   background-color: #06994fc9;
+   width: 200px;
+   padding: 10px;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-size: 25px;
+   font-weight: bolder;
+   margin-top: 150px;
+   margin-left: 50px;
+   border-radius: 25px;
+   color: #fff;
+ }
+ .label2{
+  background-color: #06994fc9;
+  width: 250px;
+  padding: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+  margin-top: 150px;
+  margin-left: 50px;
+  border-radius: 25px;
+  color: #fff;
+
+}
+.label3{
+  background-color: #ee4e48d7;
+  width: 150px;
+  padding: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: 100px;
+  margin-left: 150px;
+  border-radius: 25px;
+  color: #fff;
+
+}
+.new{
+  width:300px;
+}
+.Fr{
+  font-size: 30px;
+  font-weight: bold;
+
+}
+.info{
+  background-color: #a8a4a4a2;
+  width: 450px;
+  padding: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+height: 350px;
+  margin-left: 50px;
+  border-radius: 25px;
+  color: rgb(0, 0, 0);
+}
+.tb{
+  background-color: #c2bdbdd5; 
+  color:#000;
+  font-style: inherit;
+  font-size:25px;
+  font-weight: bold;
+}
+.fas {
+  color:#06994f;
+}
+a.view{
+  color:#04753d;
+  font-size: 25px;
+  padding: 0%;
+}
+a.start{
+  color:#ffffffde;
+  font-size: 25px;
+  padding: 0%;
+  width: 300px;
+}
+.fa-hourglass-half{
+  color:#000;
+}
+.add{
+  background-color: #dad1d1a2;
+  margin-left:70px;
+  margin-right:70px;
+
+}
+.p{
+  color:rgb(3, 2, 2);
+  font-size:30px;
+  margin-top: 10px;
+  padding-top: 25px;
+  padding-left: 25px;
+  font-family:Impact;
+}
+.but{
+  width: 100px;
+  height: 50px;
+font-size: 25px;
+border-color: none;
+color:#000;
+background-color: #06994fc9;
+margin-left: 35px;
+border-radius: 10px;
+font-size: 30px;
+font-family: impact;
+font-weight: bold;
+}
+.email{
+  width: 400px;
+}
+.frl{
+  background-color: #06994fc9;
+  font-size:30px;
+  width: 200px;
+  border-radius: 10px;
+  padding-left:10px;
+  margin-top: 10px;
+  margin-left:100px;
+  color:#fff;
+  font-weight: bold;
+}
+
+.frlist{
+  background-color: #dad1d1a2;
+  border-radius: 15px;
+  margin-left:70px;
+  margin-right:70px;
+  overflow-y: auto;
+    max-height:300px;
+    padding-left: 20px;
+}
+
+p{
+  color:black;
+  font-size:20px;
+
+  font-family:Impact;
+}
+
+
