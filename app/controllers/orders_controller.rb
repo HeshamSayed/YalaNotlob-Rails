@@ -11,16 +11,14 @@ class OrdersController < ApplicationController
     end
 
 
-
-
     def new
         @order = Order.new
-      end
+    end
 
     def create 
         @order = Order.new(order_params)
-        
-        
+        @order.user_id = current_user.id
+        @order.status=0
         if @order.save
             redirect_to @order
         else

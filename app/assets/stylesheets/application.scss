@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap";
+.hidden {
+  display: none;
+}
+
+#invite-list {
+  display: inline-block;
+  li {
+    margin: 5px 0;
+  }
+}
