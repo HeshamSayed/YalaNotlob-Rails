@@ -13,9 +13,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 Rails.application.config.assets.precompile += %w( style.css )
-<<<<<<< HEAD
 Rails.application.config.assets.precompile += %w( customJquery.js )
 Rails.application.config.assets.precompile += %w( custom_ajax.js )
-=======
-Rails.application.config.assets.precompile += %w( customJquery.js )
->>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60

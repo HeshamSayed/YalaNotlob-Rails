@@ -5,7 +5,10 @@
                             <div class="content-heading">
                               <h3> <%= member.username %> </h3>
                             </div>
-                            <a href="">Remove</a>
+                            <%= link_to 'remove', 
+      { :controller => 'groups', :action => 'removemember', :id => @member.id }, 
+      { :confirm => 'Are you sure?', :method => :delete, :remote => true ,:class => "delete_member_group"}  %>
+                          
                           </div>
 
                         </div>

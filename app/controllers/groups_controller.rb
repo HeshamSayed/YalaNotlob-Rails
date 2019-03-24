@@ -36,6 +36,10 @@ class GroupsController < ApplicationController
     end
     
  end
+ 
+ def removemember
+
+ end
 
  def groupmember
   @group = Group.find(params[:id])

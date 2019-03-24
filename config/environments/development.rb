@@ -1,9 +1,6 @@
 Rails.application.configure do
-<<<<<<< HEAD
-=======
 
   require 'carrierwave/orm/activerecord'
->>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on

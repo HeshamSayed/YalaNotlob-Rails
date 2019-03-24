@@ -92,8 +92,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
-<<<<<<< HEAD
-=======
 
 
 # Disable Rails's static asset server (Apache or nginx will already do this)  
@@ -107,4 +105,3 @@ config.assets.compile = false
 
 # Generate digests for assets URLs  
 config.assets.digest = true
->>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
