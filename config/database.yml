@@ -8,14 +8,25 @@
 #
 # And be sure to use new-style password hashing:
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
+<<<<<<< HEAD
 #
+=======
+
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
 default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+<<<<<<< HEAD
   username: nourhan
   password: norhan
   socket: /var/lib/mysql/mysql.sock
+=======
+  username: root
+  password: password
+  socket: /var/run/mysqld/mysqld.sock
+
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
 
 development:
   <<: *default

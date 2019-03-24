@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+=======
+
+<div class="login-form">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="heading">Yall Notlb</div>
+    <div class="left">
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -19,8 +27,44 @@
   <% end %>
 
   <div class="actions">
+<<<<<<< HEAD
     <%= f.submit "Log in" %>
   </div>
 <% end %>
 
 <%= render "users/shared/links" %>
+=======
+
+    <%= f.submit "Log in" %>
+  </div>
+
+  </div>
+<% end %>
+  <div class="right">
+    <div class="connect">Connect with</div>
+    <a href="" class="facebook">
+      <!--       <span class="fontawesome-facebook"></span> -->
+      <i class="fa fa-facebook" aria-hidden="true">acebook</i>
+    </a> <br />
+
+    </a> <br />
+    <a href="" class="google">
+      <!--       <span class="fontawesome-google-plus"></span> -->
+      <i class="fab fa-google" aria-hidden="true">oogle</i>
+    </a>
+  </div>
+<!--  <div class="text-center">-->
+<!--            <span class="singbut">-->
+<!--                Don’t have an account?-->
+<!--            </span>-->
+<!--    <a href="signup.html" class="txt2 hov1">-->
+
+
+<!--    </a>-->
+<!--  </div>-->
+  <%= render "users/shared/links" %>
+
+</div>
+
+</div>
+>>>>>>> c9b3769048f2190267a8ca6421bcfbd28f7eee60
