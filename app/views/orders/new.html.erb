@@ -1,0 +1,24 @@
+
+<%= form_with model: @order, local: true do |form| %>
+ 
+    <p class="field">
+      <%= form.label :restaurant_name %><br>
+      <%= form.text_field :restaurant_name %>
+    </p>
+   
+    <p class="field">
+    <%= form.label :meal %><br>
+    <%= select(:order, :meal, [['breakfast'], ['dinner'], ['lunch'],['snack']]) %>
+    </p>
+
+
+    <div class="field">
+    add a menu image....
+    <%= form.file_field :menu_image %>
+  </div>
+
+    <p>
+      <%= form.submit %>
+    </p>
+   
+  <% end %>
