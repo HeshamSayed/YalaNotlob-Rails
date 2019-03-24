@@ -15,3 +15,5 @@ Rails.application.config.assets.precompile += %w( notification.js )
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 Rails.application.config.assets.precompile += %w( style.css )
 Rails.application.config.assets.precompile += %w( customJquery.js )
+Rails.application.config.assets.precompile += %w( custom_ajax.js )
+
