@@ -1,0 +1,49 @@
+<html>
+<%= render "home/header" %>
+
+<body class="bg-body">
+
+  <!-- end navbar -->
+  <nav style="background-color: #c3c3c3de!important;" class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="">
+        <%= image_tag("logo4.png" , width: 100) %>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+
+        </ul>
+        <div class="nav-right-side my-2 my-lg-0">
+          <%= link_to "Sign in", new_session_path(:user) %>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- end navbar -->
+  <main>
+    <div class="bg-cover">
+
+      <div class="cd-fixed-bg cd-fixed-bg--1">
+        <h1>Are you hungry?</h1>
+        <h2>Don't wait!</h2>
+        <h2>Let's start to order food now!</h2>
+
+        <div class="secondary-btn">
+          <%= link_to 'Register' , registration_path(:user)+"/sign_up", role:"button" , class:"btn btn-outline-danger" %>
+
+        </div>
+      </div>
+
+      <div class="hilight"></div>
+
+    </div>
+
+  </main>
+</body>
