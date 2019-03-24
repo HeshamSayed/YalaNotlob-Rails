@@ -12,4 +12,10 @@ class DetailsController < ApplicationController
         # @orderDetails.order_id = 2
         # @orderDetails.save
     end
+    def destroy
+        @order = Order.find(params[:order_id])
+        @orderDetail = @order.order_details.find(params[:id])
+        @orderDetail.destroy
+        # redirect_to order_details
+    end
 end
