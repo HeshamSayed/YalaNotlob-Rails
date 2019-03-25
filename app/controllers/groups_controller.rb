@@ -36,6 +36,18 @@ class GroupsController < ApplicationController
     end
     
  end
+ 
+ def removemember
+  @groupUser = GroupsUser.where( member_id: params[:id] ,group_id: params[:group]).first
+  @groupUser.destroy
+  respond_to do |format|
+     format.html { redirect_to group_delete_url }
+     format.json { head :no_content }
+   
+    format.js
+   end
+
+ end
 
  def groupmember
   @group = Group.find(params[:id])
@@ -47,10 +59,12 @@ class GroupsController < ApplicationController
  end
 
  def addmember
-       friend = User.where(:username => friend_params[:name ]).first
-      @groupUser = GroupsUser.new({"member_id"=> friend.id ,"group_id"=> friend_params[:group_id ] })
+    friend = User.where(:username => friend_params[:name ]).first
+    @groupUser = GroupsUser.new({"member_id"=> friend.id ,"group_id"=> friend_params[:group_id ] })
      @groupUser.save
      @member =User.where(:id => @groupUser.member_id).first
+     @group = @groupUser.group_id
+    #  @member.customGroupId = @groupUser.id 
  end
  
  def group_params
