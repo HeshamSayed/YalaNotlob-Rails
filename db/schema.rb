@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_24_092714) do
+ActiveRecord::Schema.define(version: 2019_03_25_181910) do
 
   create_table "friends", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.integer "user_id"
@@ -24,17 +24,6 @@ ActiveRecord::Schema.define(version: 2019_03_24_092714) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-  end
-
-  create_table "groups_orders_users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
-    t.integer "user_id"
-    t.bigint "group_id"
-    t.bigint "order_id"
-    t.boolean "joined"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["group_id"], name: "index_groups_orders_users_on_group_id"
-    t.index ["order_id"], name: "index_groups_orders_users_on_order_id"
   end
 
   create_table "groups_users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
@@ -80,6 +69,15 @@ ActiveRecord::Schema.define(version: 2019_03_24_092714) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "orders_users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.integer "user_id"
+    t.bigint "order_id"
+    t.boolean "joined"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_orders_users_on_order_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -94,8 +92,7 @@ ActiveRecord::Schema.define(version: 2019_03_24_092714) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
-  add_foreign_key "groups_orders_users", "groups"
-  add_foreign_key "groups_orders_users", "orders"
   add_foreign_key "groups_users", "groups"
   add_foreign_key "order_details", "orders"
+  add_foreign_key "orders_users", "orders"
 end
