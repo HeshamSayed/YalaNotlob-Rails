@@ -563,6 +563,8 @@ margin-top: 50px;
 }
 .new{
   width:300px;
+  padding:30px;
+  padding-left: 70px;
 }
 .Fr{
   font-size: 30px;
@@ -576,13 +578,15 @@ margin-top: 50px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 25px;
   font-weight: bolder;
-height: 350px;
+  height: 250px;
+  max-height: 300px;
   margin-left: 50px;
   border-radius: 25px;
   color: rgb(0, 0, 0);
+  overflow-y: auto;
 }
 .tb{
-  background-color: #c2bdbdd5; 
+  background-color: #fffefee5; 
   color:rgba(0, 0, 0, 0.973);
   font-size:20px;
   font-weight: 100;
@@ -596,9 +600,9 @@ a.view{
   padding: 0%;
 }
 a.start{
-  color:#ffffffde;
+  color:#7de5f7ec;
   font-size: 25px;
-  padding: 0%;
+
   width: 300px;
 }
 .fa-hourglass-half{
