@@ -37,4 +37,21 @@ $(document).ready(function () {
     $('#notifications').click(function () {
         return false;       // DO NOTHING WHEN CONTAINER IS CLICKED.
     });
+
+    $('.destroy').on('click', function(){
+        // $.ajax({
+        //     url: '/orders/' + this.parentElement.id + '/details/' + this.parentElement.class,
+        //     type: 'DELETE',
+        //     success: function(){
+        //         console.log('Success');
+        //     }
+        // });
+        // axios({
+        //     url: 'localhost:3000/orders/' + this.parentElement.id + '/details/' + this.parentElement.class,
+        //     method: 'DELETE'
+        // });
+        fetch('http://localhost:3000/orders/' + this.parentElement.id + '/details/' + this.parentElement.class, {
+            method: 'DELETE'
+        });
+    });
 });
