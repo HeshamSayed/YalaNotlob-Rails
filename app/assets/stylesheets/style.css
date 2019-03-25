@@ -7,19 +7,13 @@ height: 100vh;
 width: 100%;
 background-repeat: no-repeat;
 overflow-x: hidden;
-<<<<<<< HEAD
-=======
 background-size: 100% 100%;
 position: relative;
->>>>>>> aa0334bad1d51af05d62760cad450951c2dd5357
 }
 .general-cover{
 background-color: #171717d4;
 width: 100%;
-<<<<<<< HEAD
-=======
 position: absolute;
->>>>>>> aa0334bad1d51af05d62760cad450951c2dd5357
 
 }
 /*=============== navbar style =========*/
@@ -416,37 +410,6 @@ overflow: hidden;
 position: relative;
 
 }
-<<<<<<< HEAD
-
-div.heading {
-  background: #f85f64e0;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bolder;
-  padding: 1.5em;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 25px;
-}
-
-div.left {
-  width: 50%;
-  float: left;
-  padding: 1.7em 1.5em 2.5em 1.5em;
-
-}
-div.sform {
-  width: 50%;
-  float: left;
-  padding-left: 150px;;
-
-}
-
-div.right {
-  width: 50%;
-  float: right;
-  padding: 1.7em 1.5em 2.5em 1.5em;
-=======
   
   div.heading {
     background: #f85f64e0;
@@ -486,70 +449,10 @@ div.right {
     padding: 1em;
     margin: 0.6em 0;
    
->>>>>>> aa0334bad1d51af05d62760cad450951c2dd5357
  
 }
 
 
-<<<<<<< HEAD
-input[type="email"], input[type="password"],input[type="text"] {
-  border:none;
-  border-radius:5px;
-  padding: 1em;
-  margin: 0.6em 0;
- 
-
- 
-}
-
-input[type="submit"] {
-  background: #06994fc9;
-  color: #fff;
-  outline: none;
-  text-transform: uppercase;
-  padding: 0 20px;
-  overflow: hidden;
-  align-items: center;
-  letter-spacing: 0.1em;
-  margin: 0.5em 0;
-  font-weight: bold;
-  border:none;
-  border-radius: 25px;
-  min-width: 160px;
-  height: 50px;
-  line-height: 1.2;
-  font-family: SourceSansPro-SemiBold;
-}
-
-
-
-div.connect {
-  color: gray;
-  font-size: 1.1em;
-  text-align: center;
-}
-
-a {
-  display: inline-block;
-  font-size: 1.5em;
-  text-decoration: none;
-  color: white;
-  width: 7em;
- 
-  clear: both;
-  text-align: center; 
-  min-width: 160px;
-  height: 50px;
- 
-}
-
-a.facebook {
-  background: #3772f3b0;
-  margin-top: 0.8em;
-  color:#fff;
-  font-family: 'Courier New', Courier, monospace;
-  padding: 0.55em 0.3em;
-=======
   
   div.connect {
     color: gray;
@@ -579,7 +482,6 @@ a.facebook {
     padding: 0.55em 0.3em;
       
     margin: 0.5em 0.1em;
->>>>>>> aa0334bad1d51af05d62760cad450951c2dd5357
     
   margin: 0.5em 0.1em;
   
@@ -627,18 +529,6 @@ color: #fff;
 
 }
 .label3{
-<<<<<<< HEAD
-background-color: #ee4e48d7;
-width: 150px;
-padding: 10px;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-font-size: 20px;
-font-weight: bolder;
-margin-top: 100px;
-margin-left: 150px;
-border-radius: 25px;
-color: #fff;
-=======
   background-color: #ee4e48d7;
   width: 230px;
   padding: 10px;
@@ -649,7 +539,6 @@ color: #fff;
   margin-left: 150px;
   border-radius: 25px;
   color: #fff;
->>>>>>> aa0334bad1d51af05d62760cad450951c2dd5357
 
 }
 .label4{
@@ -657,13 +546,9 @@ color: #fff;
   width: 280px;
 }
 .new{
-<<<<<<< HEAD
-width:300px;
-=======
   width:300px;
   padding:30px;
   padding-left: 70px;
->>>>>>> aa0334bad1d51af05d62760cad450951c2dd5357
 }
 .Fr{
 font-size: 30px;
@@ -671,25 +556,6 @@ font-weight: bold;
 
 }
 .info{
-<<<<<<< HEAD
-background-color: #a8a4a4a2;
-width: 450px;
-padding: 10px;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-font-size: 25px;
-font-weight: bolder;
-height: 350px;
-margin-left: 50px;
-border-radius: 25px;
-color: rgb(0, 0, 0);
-}
-.tb{
-background-color: #c2bdbdd5; 
-color:#000;
-font-style: inherit;
-font-size:25px;
-font-weight: bold;
-=======
   background-color: #fff6f6;
   width: 450px;
   padding: 10px;
@@ -708,7 +574,6 @@ font-weight: bold;
   color:rgba(0, 0, 0, 0.973);
   font-size:20px;
   font-weight: 100;
->>>>>>> aa0334bad1d51af05d62760cad450951c2dd5357
 }
 .fas {
 color:#06994f;
@@ -719,17 +584,10 @@ font-size: 25px;
 padding: 0%;
 }
 a.start{
-<<<<<<< HEAD
-color:#ffffffde;
-font-size: 25px;
-padding: 0%;
-width: 300px;
-=======
   color:#7de5f7ec;
   font-size: 25px;
 
   width: 300px;
->>>>>>> aa0334bad1d51af05d62760cad450951c2dd5357
 }
 .fa-hourglass-half{
 color:#000;
@@ -786,15 +644,6 @@ overflow-y: auto;
   padding-left: 20px;
 }
 
-<<<<<<< HEAD
-p{
-color:black;
-font-size:20px;
-
-font-family:Impact;
-}
-
-=======
 /* p{
   color:black;
   font-size:20px;
@@ -804,4 +653,3 @@ font-family:Impact;
 .left h2{
  color: #dc4443;
 }
->>>>>>> aa0334bad1d51af05d62760cad450951c2dd5357
