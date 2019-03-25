@@ -1,4 +1,5 @@
-<div class="col-6">
+
+<div class="col-6 member_group">
 
                           <div class="span4">
                             <img class="img-left" width="60" src="images/character.png" />
@@ -6,7 +7,7 @@
                               <h3> <%= member.username %> </h3>
                             </div>
                             <%= link_to 'remove', 
-      { :controller => 'groups', :action => 'removemember', :id => member.id }, 
+      { :controller => 'groups', :action => 'removemember', :id => member.id  , :group => group}, 
       { :confirm => 'Are you sure?', :method => :delete, :remote => true ,:class => "delete_member_group"}  %>
                           
                           </div>

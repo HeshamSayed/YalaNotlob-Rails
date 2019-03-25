@@ -22,8 +22,8 @@
                         </div>
                       </div>
                       <div class="row partial-group-members">
-                      
-                            <%= render partial: "member", collection: @group.members , :as => :member %>
+                   
+                            <%= render partial: "member", collection: @group.members , :as => :member , :locals => {:group => @group.id} %>
                       
                        
                       </div>
