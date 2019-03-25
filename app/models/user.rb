@@ -6,6 +6,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :order
+  has_many :friend
   
   # devise :omniauthable, :omniauth_providers => [:facebook]
 

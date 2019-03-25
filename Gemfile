@@ -3,6 +3,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.0'
 
+
+gem 'htmlbeautifier'
+
+gem 'bootstrap'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
 # Use mysql as the database for Active Record
@@ -16,6 +24,9 @@ gem 'devise'
 # Use Uglifier as compressor for JavaScript assets
 #for uploading images
 gem 'carrierwave', '~> 1.0'
+
+
+gem 'acts-as-taggable-on', '~> 6.0' #must be this version for Rails5
 
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes

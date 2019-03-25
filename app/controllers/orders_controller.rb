@@ -18,12 +18,12 @@ class OrdersController < ApplicationController
   
     def new
         @order = Order.new
-      end
+    end
 
     def create 
         @order = Order.new(order_params)
-        
-        
+        @order.user_id = current_user.id
+        @order.status=0
         if @order.save
             redirect_to @order
         else
@@ -38,7 +38,7 @@ class OrdersController < ApplicationController
 
     private
     def order_params
-        params.require(:order).permit(:restaurant_name, :meal,:menu_image)
+        params.require(:order).permit(:restaurant_name, :meal,:menu_image,:tags)
     end
 
 
