@@ -10,47 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_24_092714) do
+ActiveRecord::Schema.define(version: 2019_03_25_181910) do
 
-  create_table "friends", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "friends", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
     t.integer "friend_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "groups", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
   end
 
-  create_table "groups_orders_users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
-    t.integer "user_id"
-    t.bigint "group_id"
-    t.bigint "order_id"
-    t.boolean "joined"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["group_id"], name: "index_groups_orders_users_on_group_id"
-    t.index ["order_id"], name: "index_groups_orders_users_on_order_id"
-  end
-
-  create_table "groups_users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "groups_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "member_id"
+    t.index ["group_id", "member_id"], name: "unique_index", unique: true
     t.index ["group_id"], name: "index_groups_users_on_group_id"
   end
 
-  create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "notification"
     t.integer "user_id"
     t.boolean "status"
@@ -58,7 +48,7 @@ ActiveRecord::Schema.define(version: 2019_03_24_092714) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "order_details", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "order_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "item"
     t.integer "amount"
     t.integer "price"
@@ -70,7 +60,7 @@ ActiveRecord::Schema.define(version: 2019_03_24_092714) do
     t.index ["order_id"], name: "index_order_details_on_order_id"
   end
 
-  create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "meal"
     t.string "restaurant_name"
     t.integer "user_id"
@@ -80,7 +70,16 @@ ActiveRecord::Schema.define(version: 2019_03_24_092714) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "orders_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
+    t.bigint "order_id"
+    t.boolean "joined"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_orders_users_on_order_id"
+  end
+
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -94,8 +93,7 @@ ActiveRecord::Schema.define(version: 2019_03_24_092714) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
-  add_foreign_key "groups_orders_users", "groups"
-  add_foreign_key "groups_orders_users", "orders"
   add_foreign_key "groups_users", "groups"
   add_foreign_key "order_details", "orders"
+  add_foreign_key "orders_users", "orders"
 end

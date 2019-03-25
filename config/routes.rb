@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   post '/addMember' , :controller =>'groups' , :action =>'addmember'
   resources :groups
   delete 'removemember/:id(.:format)', :to => 'groups#removemember'
+
+  get '/addFriend' , :controller => 'friends', :action => 'add'
+  post '/addFriend' , :controller =>'friends' , :action =>'addfriend'
   # get 'group/delete' , :controller => 'groups', :action => 'delete'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
