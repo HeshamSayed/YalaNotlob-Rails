@@ -51,10 +51,12 @@ class GroupsController < ApplicationController
  end
 
  def addmember
-       friend = User.where(:username => friend_params[:name ]).first
-      @groupUser = GroupsUser.new({"member_id"=> friend.id ,"group_id"=> friend_params[:group_id ] })
+    friend = User.where(:username => friend_params[:name ]).first
+    @groupUser = GroupsUser.new({"member_id"=> friend.id ,"group_id"=> friend_params[:group_id ] })
      @groupUser.save
      @member =User.where(:id => @groupUser.member_id).first
+    #  @member.customGroupId = @groupUser.id
+    
  end
  
  def group_params

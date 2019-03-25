@@ -6,7 +6,7 @@
                               <h3> <%= member.username %> </h3>
                             </div>
                             <%= link_to 'remove', 
-      { :controller => 'groups', :action => 'removemember', :id => @member.id }, 
+      { :controller => 'groups', :action => 'removemember', :id => member.id }, 
       { :confirm => 'Are you sure?', :method => :delete, :remote => true ,:class => "delete_member_group"}  %>
                           
                           </div>

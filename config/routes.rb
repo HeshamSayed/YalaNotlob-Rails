@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       sessions: 'users/sessions'}
 
   root to: 'home#index'
+  # root to: 'homepage#homeindex'
   resources :orders do
     resources :details
   end
