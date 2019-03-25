@@ -1,12 +1,21 @@
 class OrdersController < ApplicationController
     def index
-        @orders = Order.all
-      
+        @orders = Order.where(user_id: current_user.id)
+        
     end
 
+    def destroy
+        @orders = Order.find(params[:id])
+        @orders.destroy
+        redirect_to orders_path
+        end
 
-
-
+        def update
+            @order = Order.find params[:id]
+            @order.update(status: 1)
+            redirect_to orders_path
+            end
+  
     def new
         @order = Order.new
       end
