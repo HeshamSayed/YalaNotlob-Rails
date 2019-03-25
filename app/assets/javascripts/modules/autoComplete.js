@@ -1,5 +1,6 @@
 $(document).ready(function() {
   let availableTags = ["mostafa", "ali", "mohamed", "amr", "sherif","sara"];
+  let tags=[];
   $("#tags").autocomplete({
     source: availableTags,
     select: function(event, ui) {
@@ -12,7 +13,8 @@ $(document).ready(function() {
         )
         .find("li.hidden")
         .fadeIn();
-        console.log(this);
+        tags.push(ui.item.value);
+       console.log(tags);
     }
   });
 
