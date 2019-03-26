@@ -1,0 +1,8 @@
+<div class="frcontant single-friend">
+                <img src="image/user.png" width=100px>
+                <p style="color:#000"> <%= friend.user.username %> </p> 
+                <%# <span style="color:#ce130c;">Un Friend</span> %>
+                <%= link_to 'Un Friend', friend,
+              method: :delete,
+              data: { confirm: 'Are you sure?' } ,:remote => true ,:style => "color:#ce130c;" ,:class=>'custom-delete-friend' %>
+               </div>
