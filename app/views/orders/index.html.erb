@@ -37,7 +37,7 @@
         <td><%= order.restaurant_name %></td>
         <td><%= @invited.where(order_id: order.id).count %></td>
         <td><%= @invited.where(order_id: order.id, joined: 1).count %></td>
-      
+        
         <% if order.status == true %>
         <td> finished </td>
         <% else %>
