@@ -403,12 +403,12 @@ margin-top: 50px;
 /************************* fatema *******************/
 
 .login-form {
-  background: #eeeaead2;
-  width: 35em;
-  margin: 2em auto;
-  overflow: hidden;
-  position: relative;
-  
+background: #eeeaead2;
+width: 35em;
+margin: 2em auto;
+overflow: hidden;
+position: relative;
+
 }
   
   div.heading {
@@ -450,26 +450,6 @@ margin-top: 50px;
     margin: 0.6em 0;
    
  
-   
-  }
-  
-  input[type="submit"] {
-    background: #06994fc9;
-    color: #fff;
-    outline: none;
-    text-transform: uppercase;
-    padding: 0 20px;
-    overflow: hidden;
-    align-items: center;
-    letter-spacing: 0.1em;
-    margin: 0.5em 0;
-    font-weight: bold;
-    border:none;
-    border-radius: 25px;
-    min-width: 160px;
-    height: 50px;
-    line-height: 1.2;
-    font-family: SourceSansPro-SemiBold;
 }
 
 
@@ -503,47 +483,49 @@ margin-top: 50px;
       
     margin: 0.5em 0.1em;
     
-  }
+  margin: 0.5em 0.1em;
+  
+}
 
-  a.google {
-    background: #ee4e48d7;
-    font-family: 'Courier New', Courier, monospace;
-    color:#fff;
-    padding: 0.55em 0.3em;
-      
-    margin: 0.5em 0.1em;
+a.google {
+  background: #ee4e48d7;
+  font-family: 'Courier New', Courier, monospace;
+  color:#fff;
+  padding: 0.55em 0.3em;
+    
+  margin: 0.5em 0.1em;
 }
 .login100-form-title {
-    display: block;
-    font-family: SourceSansPro-Bold;
-    font-size: 25px;
-    color: #1b0d1f;
-    line-height: 1.2;
-    text-align: center;
-  }
- .label{
-   background-color: #06994fc9;
-   width: 200px;
-   padding: 10px;
-   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   font-size: 25px;
-   font-weight: bolder;
-   margin-top: 150px;
-   margin-left: 50px;
-   border-radius: 25px;
-   color: #fff;
- }
- .label2{
-  background-color: #06994fc9;
-  width: 250px;
-  padding: 10px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: block;
+  font-family: SourceSansPro-Bold;
   font-size: 25px;
-  font-weight: bolder;
-  margin-top: 150px;
-  margin-left: 50px;
-  border-radius: 25px;
-  color: #fff;
+  color: #1b0d1f;
+  line-height: 1.2;
+  text-align: center;
+}
+.label{
+ background-color: #06994fc9;
+ width: 200px;
+ padding: 10px;
+ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ font-size: 25px;
+ font-weight: bolder;
+ margin-top: 150px;
+ margin-left: 50px;
+ border-radius: 25px;
+ color: #fff;
+}
+.label2{
+background-color: #06994fc9;
+width: 250px;
+padding: 10px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size: 25px;
+font-weight: bolder;
+margin-top: 150px;
+margin-left: 50px;
+border-radius: 25px;
+color: #fff;
 
 }
 .label3{
@@ -569,8 +551,8 @@ margin-top: 50px;
   padding-left: 70px;
 }
 .Fr{
-  font-size: 30px;
-  font-weight: bold;
+font-size: 30px;
+font-weight: bold;
 
 }
 .info{
@@ -594,12 +576,12 @@ margin-top: 50px;
   font-weight: 100;
 }
 .fas {
-  color:#06994f;
+color:#06994f;
 }
 a.view{
-  color:#04753d;
-  font-size: 25px;
-  padding: 0%;
+color:#04753d;
+font-size: 25px;
+padding: 0%;
 }
 a.start{
   color:#7de5f7ec;
@@ -608,25 +590,25 @@ a.start{
   width: 300px;
 }
 .fa-hourglass-half{
-  color:#000;
+color:#000;
 }
 .add{
-  background-color: #dad1d1a2;
-  margin-left:70px;
-  margin-right:70px;
+background-color: #dad1d1a2;
+margin-left:70px;
+margin-right:70px;
 
 }
 .p{
-  color:rgb(3, 2, 2);
-  font-size:30px;
-  margin-top: 10px;
-  padding-top: 25px;
-  padding-left: 25px;
-  font-family:Impact;
+color:rgb(3, 2, 2);
+font-size:30px;
+margin-top: 10px;
+padding-top: 25px;
+padding-left: 25px;
+font-family:Impact;
 }
 .but{
-  width: 100px;
-  height: 50px;
+width: 100px;
+height: 50px;
 font-size: 25px;
 border-color: none;
 color:#000;
@@ -638,28 +620,28 @@ font-family: impact;
 font-weight: bold;
 }
 .email{
-  width: 400px;
+width: 400px;
 }
 .frl{
-  background-color: #06994fc9;
-  font-size:30px;
-  width: 200px;
-  border-radius: 10px;
-  padding-left:10px;
-  margin-top: 10px;
-  margin-left:100px;
-  color:#fff;
-  font-weight: bold;
+background-color: #06994fc9;
+font-size:30px;
+width: 200px;
+border-radius: 10px;
+padding-left:10px;
+margin-top: 10px;
+margin-left:100px;
+color:#fff;
+font-weight: bold;
 }
 
 .frlist{
-  background-color: #dad1d1a2;
-  border-radius: 15px;
-  margin-left:70px;
-  margin-right:70px;
-  overflow-y: auto;
-    max-height:300px;
-    padding-left: 20px;
+background-color: #dad1d1a2;
+border-radius: 15px;
+margin-left:70px;
+margin-right:70px;
+overflow-y: auto;
+  max-height:300px;
+  padding-left: 20px;
 }
 
 /* p{

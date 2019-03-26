@@ -11,11 +11,12 @@
   <div class=" col-md-6 right">
     <div class="new">
 
-       <a href="/addorders" class="start"> Start new orders</a>
+       <a href="/orders/new" class="start"> Start new orders</a>
     
     </div>
   </div>
   <div class="tablecontant col-md-">
+
     <table class="table  col-md-12">
       <thead class="thead-dark">
         <tr>
@@ -43,16 +44,34 @@
         <td> wating </td> 
         <% end %>
           <td>
-        finish
-        <i class="fas fa-window-close"></i>
+
+          <%if order.status == false %>
+        
+      
+      
+       
+    
+             
+
+         
+            <%= link_to 'change', 
+            { :controller => 'orders', :action => 'update', :id => order.id }, 
+            {:confirm => 'Are you sure?', :method => :put }%>
+            <%= link_to 'remove', 
+            { :controller => 'orders', :action => 'destroy', :id => order.id }, 
+            {:confirm => 'Are you sure?', :method => :delete }%>
+           
+            <% end %>
+
+       
         <%= link_to 'view', order_details_path(order) ,class: "a view"%>
        </td>
-        </tr>
+        </tr> 
 
         <% end %>
       </tbody>
     </table>
-
+  
     <!-- part -->
     <div class="left col-md-6">
      

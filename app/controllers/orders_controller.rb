@@ -1,20 +1,29 @@
 class OrdersController < ApplicationController
     def index
-        @orders = Order.all
-      
+        @orders = Order.where(user_id: current_user.id)
+        
     end
 
+    def destroy
+        @orders = Order.find(params[:id])
+        @orders.destroy
+        redirect_to orders_path
+        end
 
-
-
+        def update
+            @order = Order.find params[:id]
+            @order.update(status: 1)
+            redirect_to orders_path
+            end
+  
     def new
         @order = Order.new
-      end
+    end
 
     def create 
         @order = Order.new(order_params)
-        
-        
+        @order.user_id = current_user.id
+        @order.status=0
         if @order.save
             redirect_to @order
         else
@@ -29,7 +38,7 @@ class OrdersController < ApplicationController
 
     private
     def order_params
-        params.require(:order).permit(:restaurant_name, :meal,:menu_image)
+        params.require(:order).permit(:restaurant_name, :meal,:menu_image,:tags)
     end
 
 
