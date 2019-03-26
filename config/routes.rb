@@ -2,9 +2,11 @@ Rails.application.routes.draw do
 
   get 'homepage/homeindex'
   get 'home/index'
-  devise_for :users, controllers: {
-      sessions: 'users/sessions'}
 
+  #devise_for :users, controllers: {  sessions: 'users/sessions'}
+
+  devise_for :users, :controllers => {sessions: 'users/sessions', :omniauth_callbacks => "users/omniauth_callbacks" }
+  
   root to: 'home#index'
   # root to: 'homepage#homeindex'
   resources :orders do
