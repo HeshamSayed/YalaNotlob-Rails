@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/addGroupMember', :controller => 'groups', :action => 'groupmember'
   post '/addMember' , :controller =>'groups' , :action =>'addmember'
   resources :groups
+  resources :friends
   delete 'removemember/:id(.:format)', :to => 'groups#removemember'
 
   get '/addFriend' , :controller => 'friends', :action => 'add'
