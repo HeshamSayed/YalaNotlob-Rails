@@ -42,19 +42,19 @@
 
                 <div class="form-group row">
                     <%= form_for(:order_detail, url: "/orders/#{@order.id}/details", method: "post") do |form| %>
-                        <div class="col-3">
+                        <div class="col-3 display-in">
                             <%= form.text_field(:item ,id: 'example-text-input', class: 'form-control', maxlength: 30)%>
                         </div>
-                        <div class="col-2">
+                        <div class="col-2 display-in">
                             <%= form.number_field(:amount ,id: 'example-number-input', class: 'form-control',value: 3 , in: 0..100)%>
                         </div>
-                        <div class="col-2">
+                        <div class="col-2 display-in">
                             <%= form.number_field(:price, id: 'example-number-input', class:'form-control', value: 3, in:0..100)%>
                         </div>
-                        <div class="col-3">
+                        <div class="col-3 display-in">
                             <%= form.text_field(:comment, id: 'example-text-input', class: 'form-control', maxlength: 100)%>
                         </div>
-                        <div class="col-2">
+                        <div class="col-2 display-in">
                             <%= form.submit(value:"Add", class:"btn btn-outline-danger")%>
                         </div>
                     <% end %>
@@ -116,10 +116,10 @@
 
                 <div class="col-5 source-padal">
                     <a href="" data-toggle="modal" data-target="#exampleModalCenter">
-                        <p>10 Friends invited, Click to view</p>
+                        <p><%= @invited.where(order_id: @order.id).count%> Friends invited, Click to view</p>
                     </a>
                     <a href="" data-toggle="modal" data-target="#exampleModalCenter2">
-                        <p>5 Friends joined, Click to view</p>
+                        <p><%= @invited.where(order_id: @order.id, joined: 1).count %> Friends joined, Click to view</p>
                     </a>
                     <!-- Modal 1 -->
                     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -133,33 +133,27 @@
                                     </button>
                                 </div>
 
+                                <% @value = @invited.where(order_id: @order.id)%>
+                                <% @value.each do |id| %>
+                                <% @currentUser = User.find(id.user_id)%>
+                                
                                 <div class="modal-body">
                                     <div class="row">
-                                        <div class="col-6">
+                                            <div class="col-6">
 
-                                            <div class="span4">
-                                                <img class="img-left" width="60" src="images/character.png" />
-                                                <div class="content-heading">
-                                                    <h3>Name &nbsp </h3>
+                                                <div class="span4">
+                                                    <img class="img-left" width="60" src="images/character.png" />
+                                                    <div class="content-heading">
+                                                        <h3><%= @currentUser.username %></h3>
+                                                    </div>
+                                                    <a href="">Remove</a>
                                                 </div>
-                                                <a href="">Remove</a>
+
                                             </div>
-
-                                        </div>
-                                        <div class="col-6">
-
-                                            <div class="span4">
-                                                <img class="img-left" width="60" src="images/character.png" />
-                                                <div class="content-heading">
-                                                    <h3>Name &nbsp </h3>
-                                                </div>
-                                                <a href="">Remove</a>
-                                            </div>
-
-                                        </div>
-
                                     </div>
                                 </div>
+                                            
+                                <% end %>
 
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -181,34 +175,26 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-
+                                <% @newvalue = @invited.where(order_id: @order.id ,joined: 1)%>
+                                <% @newvalue.each do |id| %>
+                                <% @newcurrentUser = User.find(id.user_id)%>
                                 <div class="modal-body">
                                     <div class="row">
+                                        
                                         <div class="col-6">
 
                                             <div class="span4">
                                                 <img class="img-left" width="60" src="images/character.png" />
                                                 <div class="content-heading">
-                                                    <h3>Name &nbsp </h3>
+                                                    <h3><%= @newcurrentUser.username %></h3>
                                                 </div>
-                                                <a href="">Remove</a>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-6">
-
-                                            <div class="span4">
-                                                <img class="img-left" width="60" src="images/character.png" />
-                                                <div class="content-heading">
-                                                    <h3>Name &nbsp </h3>
-                                                </div>
-                                                <a href="">Remove</a>
                                             </div>
 
                                         </div>
 
                                     </div>
                                 </div>
+                                <% end %>
 
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

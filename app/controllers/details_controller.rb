@@ -1,6 +1,8 @@
 class DetailsController < ApplicationController
     def index
         @order = Order.find(params[:order_id])
+        @invited = OrdersUser.all
+        @users = User.all
     end
     def new
         # @orderDetails = OrderDetail.new
