@@ -610,17 +610,16 @@ padding-left: 25px;
 font-family:Impact;
 }
 .but{
-width: 100px;
-height: 50px;
-font-size: 25px;
+width: 120px;
+height: 40px;
+font-size: 20px;
 border-color: none;
-color:#000;
-background-color: #06994fc9;
-margin-left: 35px;
+color:rgb(73, 73, 73);
+background-color: #06994fab;
+margin-left: 50px;
 border-radius: 10px;
-font-size: 30px;
-font-family: impact;
-font-weight: bold;
+margin-bottom: 20px;
+font-weight:bold
 }
 .email{
 width: 400px;
