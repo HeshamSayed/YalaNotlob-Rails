@@ -20,12 +20,12 @@
     <table class="table  col-md-12">
       <thead class="thead-dark">
         <tr>
-          <th>Ordre</th>
-          <th>Resturnats</th>
-          <th>Invited</th>
-          <th>Joined</th>
-          <th>Status</th>
-          <th>Action</th>
+          <th scope="col">Ordre</th>
+          <th scope="col">Resturnats</th>
+          <th scope="col">Invited</th>
+          <th scope="col">Joined</th>
+          <th scope="col">Status</th>
+          <th scope="col">Action</th>
 
         </tr>
       </thead>
@@ -35,8 +35,8 @@
         
         <td><%= order.meal %></td>
         <td><%= order.restaurant_name %></td>
-        <td>10</td>
-        <td>5</td>
+        <td><%= @invited.where(order_id: order.id).count %></td>
+        <td><%= @invited.where(order_id: order.id, joined: 1).count %></td>
       
         <% if order.status == true %>
         <td> finished </td>
@@ -46,17 +46,10 @@
           <td>
 
           <%if order.status == false %>
-        
-      
-      
-       
-    
-             
-
-         
-            <%= link_to 'change', 
-            { :controller => 'orders', :action => 'update', :id => order.id }, 
-            {:confirm => 'Are you sure?', :method => :put }%>
+           
+          <%= link_to 'change', 
+          { :controller => 'orders', :action => 'update', :id => order.id }, 
+          {:confirm => 'Are you sure?', :method => :put }%>
             <%= link_to 'remove', 
             { :controller => 'orders', :action => 'destroy', :id => order.id }, 
             {:confirm => 'Are you sure?', :method => :delete }%>
