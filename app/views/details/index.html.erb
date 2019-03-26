@@ -101,10 +101,12 @@
                                     <td><%= detail.price %></td>
                                     <td><%= detail.comments %></td>
                                     <td>
-                                        # <a href=""><i class="fa fa-trash destroy" aria-hidden="true"></i></a>
-                                        <%= link_to 'Delete', "/orders/#{@order.id}/details/#{detail.id}",
-                                        method: :delete,
-                                        data: { confirm: 'Are you sure?' , remote: true}, class:"delete" %>
+                                        <% if @name.id == current_user.id || @order.user_id == current_user.id%>
+                                            
+                                            <%= link_to 'Delete', "/orders/#{@order.id}/details/#{detail.id}",
+                                            method: :delete,
+                                            data: { confirm: 'Are you sure?' , remote: true}, class:"delete" %>
+                                        <% end %>
                                     </td>
                                 </tr>
                             <% end %>
