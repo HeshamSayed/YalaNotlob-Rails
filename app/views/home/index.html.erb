@@ -6,8 +6,13 @@
       Last Orders
     </div>
     <div class="info">
-      <p>Lunch on 15/03/2019</p>
-     
+  
+    <% @lastOrder.each do |order| %>
+<p>
+<%= order.meal %> on <%order.created_at%>
+</p>
+      
+<% end %>     
     </div>
   </div>
   <div class="right col-md-6">
