@@ -26,7 +26,6 @@ class OrdersController < ApplicationController
 
     def create 
         #logger.debug "\n#{params[:tags]}\n";
-        
         @order = Order.new({"meal"=>order_params[:meal] , "restaurant_name"=>order_params[:restaurant_name] ,"menu_image"=>order_params[:menu_image] })
         @order.user_id = current_user.id
         @order.status=0
@@ -41,7 +40,7 @@ class OrdersController < ApplicationController
             @ordersUser.save
             end
            
-            redirect_to "orders/#{@order.id}/details"
+            redirect_to "/orders/#{@order.id}/details"
         else
             render 'new'
         end

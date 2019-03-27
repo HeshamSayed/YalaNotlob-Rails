@@ -11,8 +11,8 @@
   <div class=" col-md-6 right">
     <div class="new">
 
-       <a href="/orders/new" class="start"> Start new orders</a>
-       
+       <%= link_to 'Start new Orders', "/orders/new" ,class: "start"%>
+       <%= link_to "Add", {:controller => "orders", :action => "new"}%>
     
     </div>
   </div>
