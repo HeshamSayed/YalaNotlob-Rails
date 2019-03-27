@@ -1,7 +1,7 @@
 <div class="general-cover" style="height: 100%;">
 <div class="login-form">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="heading">Yall Notlb</div>
+    <div class="heading">Yalla Notlob</div>
     <div class="left">
   <div class="field">
     <%= f.label :email %><br />
@@ -22,23 +22,13 @@
 
   <div class="actions">
 
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in",class:"but" %>
   </div>
 
   </div>
 <% end %>
   <div class="right">
-    <div class="connect">Connect with</div>
-    <a href="" class="facebook">
-      <!--       <span class="fontawesome-facebook"></span> -->
-      <i class="fa fa-facebook" aria-hidden="true">acebook</i>
-    </a> <br />
-
-    </a> <br />
-    <a href="" class="google">
-      <!--       <span class="fontawesome-google-plus"></span> -->
-      <i class="fab fa-google" aria-hidden="true">oogle</i>
-    </a>
+   
   </div>
 
   <%= render "users/shared/links" %>

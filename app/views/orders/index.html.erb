@@ -16,16 +16,24 @@
     </div>
   </div>
   <div class="tablecontant col-md-">
-
+  <%= will_paginate @orders %>
+  <div class="pagination">
+  <span class="previous_page disabled">&#8592; Previous</span>
+  <em class="current">1</em>
+  <a rel="next" href="/products?page=2">2</a>
+  <a href="/products?page=3">3</a>
+  <a href="/products?page=4">4</a>
+  <a class="next_page" rel="next" href="/products?page=2">Next &#8594;</a>
+</div>
     <table class="table  col-md-12">
       <thead class="thead-dark">
         <tr>
-          <th>Ordre</th>
-          <th>Resturnats</th>
-          <th>Invited</th>
-          <th>Joined</th>
-          <th>Status</th>
-          <th>Action</th>
+          <th scope="col">Ordre</th>
+          <th scope="col">Resturnats</th>
+          <th scope="col">Invited</th>
+          <th scope="col">Joined</th>
+          <th scope="col">Status</th>
+          <th scope="col">Action</th>
 
         </tr>
       </thead>
@@ -35,9 +43,9 @@
         
         <td><%= order.meal %></td>
         <td><%= order.restaurant_name %></td>
-        <td>10</td>
-        <td>5</td>
-      
+        <td><%= @invited.where(order_id: order.id).count %></td>
+        <td><%= @invited.where(order_id: order.id, joined: 1).count %></td>
+        
         <% if order.status == true %>
         <td> finished </td>
         <% else %>
@@ -46,17 +54,10 @@
           <td>
 
           <%if order.status == false %>
-        
-      
-      
-       
-    
-             
-
-         
-            <%= link_to 'change', 
-            { :controller => 'orders', :action => 'update', :id => order.id }, 
-            {:confirm => 'Are you sure?', :method => :put }%>
+           
+          <%= link_to 'change', 
+          { :controller => 'orders', :action => 'update', :id => order.id }, 
+          {:confirm => 'Are you sure?', :method => :put }%>
             <%= link_to 'remove', 
             { :controller => 'orders', :action => 'destroy', :id => order.id }, 
             {:confirm => 'Are you sure?', :method => :delete }%>
@@ -70,46 +71,10 @@
 
         <% end %>
       </tbody>
+      <%= will_paginate @orders %>
     </table>
   
-    <!-- part -->
-    <div class="left col-md-6">
-     
-        <h2> sharing Orders</h2>
-  
-    </div>
-    <table class="table  col-md-12">
-      <thead class="thead-dark">
-        <tr>
-          <th>Ordre</th>
-          <th>Resturnats</th>
-          <th>Invited</th>
-          <th>Joined</th>
-          <th>Status</th>
-          <th>Action</th>
-
-        </tr>
-      </thead>
-      <tbody class="tb">
-      <% @orders.each do |order| %>
-        <tr>
-       
-        
-        <td><%= order.meal %></td>
-        <td><%= order.restaurant_name %></td>
-        <td>10</td>
-        <td>5</td>
-        <td><%= order.status %></td>
-        <td>
-        <%= link_to 'view', order_details_path(order) ,class: "a view"%>
-
-        </td>
-        </tr>
-       
-
-        <% end %>
-      </tbody>
-    </table>
+   
 
   </div>
   </div>
