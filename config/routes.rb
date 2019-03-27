@@ -7,13 +7,14 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => {sessions: 'users/sessions', :omniauth_callbacks => "users/omniauth_callbacks" }
   
-  root to: 'home#index'
-  # root to: 'homepage#homeindex'
-  resources :orders , only: [:index] do
-    resources :details
-  root to: "orders#index"
 
+
+   root to: 'home#index'
+  # root to: 'homepage#homeindex'
+  resources :orders do
+    resources :details
   end
+
   get '/addGroup', :controller => 'groups', :action => 'add'
   post '/addGroup', :controller => 'groups', :action => 'addgroup'
   get '/addGroupMember', :controller => 'groups', :action => 'groupmember'
