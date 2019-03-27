@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_27_153128) do
+ActiveRecord::Schema.define(version: 2019_03_27_164034) do
 
   create_table "friends", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.integer "friend_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -24,7 +24,8 @@ ActiveRecord::Schema.define(version: 2019_03_27_153128) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "fk_rails_5e78cd340a"
   end
 
   create_table "groups_users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
@@ -43,10 +44,11 @@ ActiveRecord::Schema.define(version: 2019_03_27_153128) do
 
   create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "notification"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.boolean "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "fk_rails_b080fb4855"
   end
 
   create_table "order_details", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
@@ -54,17 +56,18 @@ ActiveRecord::Schema.define(version: 2019_03_27_153128) do
     t.integer "amount"
     t.integer "price"
     t.text "comments"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.bigint "order_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_order_details_on_order_id"
+    t.index ["user_id"], name: "fk_rails_67f58df321"
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "meal"
     t.string "restaurant_name"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.string "menu_image"
     t.boolean "status"
     t.datetime "created_at", null: false
@@ -72,7 +75,7 @@ ActiveRecord::Schema.define(version: 2019_03_27_153128) do
   end
 
   create_table "orders_users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.bigint "order_id"
     t.boolean "joined"
     t.datetime "created_at", null: false
@@ -122,7 +125,11 @@ ActiveRecord::Schema.define(version: 2019_03_27_153128) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "friends", "users"
+  add_foreign_key "groups", "users"
   add_foreign_key "groups_users", "groups"
+  add_foreign_key "notifications", "users"
   add_foreign_key "order_details", "orders"
+  add_foreign_key "order_details", "users"
   add_foreign_key "orders_users", "orders"
 end
