@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_27_171142) do
+ActiveRecord::Schema.define(version: 2019_03_27_173020) do
 
   create_table "friends", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2019_03_27_171142) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_order_details_on_order_id"
+    t.index ["user_id"], name: "fk_rails_67f58df321"
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -71,6 +72,7 @@ ActiveRecord::Schema.define(version: 2019_03_27_171142) do
     t.boolean "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "fk_rails_f868b47f6a"
   end
 
   create_table "orders_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -80,6 +82,7 @@ ActiveRecord::Schema.define(version: 2019_03_27_171142) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_orders_users_on_order_id"
+    t.index ["user_id"], name: "fk_rails_5689e963ba"
   end
 
   create_table "taggings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -129,5 +132,8 @@ ActiveRecord::Schema.define(version: 2019_03_27_171142) do
   add_foreign_key "groups_users", "groups", on_delete: :cascade
   add_foreign_key "notifications", "users"
   add_foreign_key "order_details", "orders"
+  add_foreign_key "order_details", "users"
+  add_foreign_key "orders", "users"
   add_foreign_key "orders_users", "orders", on_delete: :cascade
+  add_foreign_key "orders_users", "users"
 end
