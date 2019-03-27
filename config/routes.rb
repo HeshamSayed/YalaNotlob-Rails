@@ -7,13 +7,14 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => {sessions: 'users/sessions', :omniauth_callbacks => "users/omniauth_callbacks" }
   
-  root to: 'home#index'
-  # root to: 'homepage#homeindex'
-  resources :orders , only: [:index] do
-    resources :details
-  root to: "orders#index"
 
+
+   root to: 'home#index'
+  # root to: 'homepage#homeindex'
+  resources :orders do
+    resources :details
   end
+
   get '/addGroup', :controller => 'groups', :action => 'add'
   post '/addGroup', :controller => 'groups', :action => 'addgroup'
   get '/addGroupMember', :controller => 'groups', :action => 'groupmember'
@@ -28,5 +29,10 @@ Rails.application.routes.draw do
   post '/addFriend' , :controller =>'friends' , :action =>'addfriend'
   get '/friendActivity' , :controller => 'home', :action => 'friendactivity'
   # get 'group/delete' , :controller => 'groups', :action => 'delete'
+
+  get '/test', :controller => 'orders', :action => 'test'
+  get '/group', :controller => 'orders', :action => 'group'
+  post '/save', :controller => 'orders', :action => 'save'
+  #get '/save', :controller => 'orders', :action => 'saveadd'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

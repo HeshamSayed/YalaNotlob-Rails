@@ -1,6 +1,6 @@
  <% if !friend.nil? %>
 <div class="frcontant single-friend">
-                <img src="image/user.png" width=100px>
+                <%=image_tag(friend.user.image, :width => 50, :height => 50, :crop => :fill) %>
                 <p style="color:#000"> <%= friend.user.username %> </p> 
                 <%# <span style="color:#ce130c;">Un Friend</span> %>
                 <%= link_to 'Un Friend', friend,

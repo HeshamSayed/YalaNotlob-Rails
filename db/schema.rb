@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_26_234024) do
+ActiveRecord::Schema.define(version: 2019_03_27_184504) do
 
   create_table "friends", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.integer "friend_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -24,7 +24,8 @@ ActiveRecord::Schema.define(version: 2019_03_26_234024) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.bigint "user_id"
+    t.index ["user_id", "name"], name: "index_groups_on_user_id_and_name", unique: true
   end
 
   create_table "groups_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -33,7 +34,6 @@ ActiveRecord::Schema.define(version: 2019_03_26_234024) do
     t.datetime "updated_at", null: false
     t.integer "member_id"
     t.index ["group_id", "member_id"], name: "index_groups_users_on_group_id_and_member_id", unique: true
-    t.index ["group_id", "member_id"], name: "unique_index", unique: true
     t.index ["group_id"], name: "index_groups_users_on_group_id"
   end
 
@@ -44,10 +44,11 @@ ActiveRecord::Schema.define(version: 2019_03_26_234024) do
 
   create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "notification"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.boolean "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "fk_rails_b080fb4855"
   end
 
   create_table "order_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -55,30 +56,33 @@ ActiveRecord::Schema.define(version: 2019_03_26_234024) do
     t.integer "amount"
     t.integer "price"
     t.text "comments"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.bigint "order_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_order_details_on_order_id"
+    t.index ["user_id"], name: "fk_rails_67f58df321"
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "meal"
     t.string "restaurant_name"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.string "menu_image"
     t.boolean "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "fk_rails_f868b47f6a"
   end
 
   create_table "orders_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.bigint "order_id"
     t.boolean "joined"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_orders_users_on_order_id"
+    t.index ["user_id"], name: "fk_rails_5689e963ba"
   end
 
   create_table "taggings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -117,12 +121,19 @@ ActiveRecord::Schema.define(version: 2019_03_26_234024) do
     t.string "username"
     t.string "oauth_token"
     t.datetime "oauth_expires_at"
+    t.text "image"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
-  add_foreign_key "groups_users", "groups"
-  add_foreign_key "order_details", "orders"
-  add_foreign_key "orders_users", "orders"
+  add_foreign_key "friends", "users"
+  add_foreign_key "groups", "users"
+  add_foreign_key "groups_users", "groups", on_delete: :cascade
+  add_foreign_key "notifications", "users"
+  add_foreign_key "order_details", "orders", on_delete: :cascade
+  add_foreign_key "order_details", "users"
+  add_foreign_key "orders", "users"
+  add_foreign_key "orders_users", "orders", on_delete: :cascade
+  add_foreign_key "orders_users", "users"
 end
