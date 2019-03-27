@@ -5,10 +5,29 @@ class FriendsController < ApplicationController
     end
 
     def addfriend
-        friend = User.where(:email => friend_params[:email]).first
-        @friendUser = Friend.new({"friend_id"=> friend.id ,"user_id"=> friend_params[:user_id] })
-        @friendUser.save
-        @friend = @friendUser
+
+        @msg ='';
+        email = friend_params[:email]
+        if email.empty? 
+            @msg = "friend email can not be empty" 
+        else
+            if friend = User.where(:email => friend_params[:email]).first
+                if friend.id == current_user.id
+                    @msg ='you can not add this friend'
+                else
+                    @friendUser = Friend.new({"friend_id"=> friend.id ,"user_id"=> friend_params[:user_id] })
+                    if @friendUser.save
+                    @friend = @friendUser 
+                    else
+                       @msg = "you already have this friend" 
+                    end
+                end 
+               
+            else
+                @msg ='we canot found friend with this email'    
+            end
+        end
+
     end
 
     def friend_params

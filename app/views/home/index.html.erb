@@ -6,8 +6,13 @@
       Last Orders
     </div>
     <div class="info">
-      <p>Lunch on 15/03/2019</p>
-     
+  
+    <% @lastOrder.each do |order| %>
+<p>
+<%= order.meal %> on <%order.created_at%>
+</p>
+      
+<% end %>     
     </div>
   </div>
   <div class="right col-md-6">
@@ -16,10 +21,16 @@
     </div>
     <div class="info">
       <p>
-        <span style="color: #ee4e48; font-style: italic; ">Fatem</span> has created an order for
-        lunch from
-
-        <span style="color:#f33d37;   font-style: italic;">mac</span> </p>
+       
+        <% @friendActivity.each do |order|%>
+          <p>
+          <%= User.find_by_id(order.user_id).username %>
+             has created anorder for
+                    <%= order.meal %> 
+                    from
+                  <%= order.restaurant_name %>
+          </p>
+          <% end %>  
     </div>
   </div>
 </div>

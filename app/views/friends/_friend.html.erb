@@ -1,3 +1,4 @@
+ <% if !friend.nil? %>
 <div class="frcontant single-friend">
                 <img src="image/user.png" width=100px>
                 <p style="color:#000"> <%= friend.user.username %> </p> 
@@ -6,3 +7,4 @@
               method: :delete,
               data: { confirm: 'Are you sure?' } ,:remote => true ,:style => "color:#ce130c;" ,:class=>'custom-delete-friend' %>
                </div>
+<% end %>
