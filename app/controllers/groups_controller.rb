@@ -27,12 +27,12 @@ class GroupsController < ApplicationController
    
     if @group.save
       respond_to do |format|
-      format.html { redirect_to @group, notice: 'User was successfully created.' }
+      format.html { redirect_to @group, notice: 'group was successfully created.' }
       format.js
       format.json { head :no_content }
       end
     else
-       
+      
     end
     
  end
@@ -59,12 +59,25 @@ class GroupsController < ApplicationController
  end
 
  def addmember
-    friend = User.where(:username => friend_params[:name ]).first
-    @groupUser = GroupsUser.new({"member_id"=> friend.id ,"group_id"=> friend_params[:group_id ] })
-     @groupUser.save
-     @member =User.where(:id => @groupUser.member_id).first
-     @group = @groupUser.group_id
-    #  @member.customGroupId = @groupUser.id 
+  @msg ='';
+  name = friend_params[:name ]
+  if name.empty? 
+      @msg = "friend name can not be empty" 
+  else
+    if friend = User.where(:username => friend_params[:name ]).first
+      if relation = Friend.where(:user_id => friend_params[:user_id]).where(:friend_id => friend[:id]).first
+        @groupUser = GroupsUser.new({"member_id"=> friend.id ,"group_id"=> friend_params[:group_id ] })
+        @groupUser.save
+        @member =User.where(:id => @groupUser.member_id).first
+        @group = @groupUser.group_id
+      else
+        @msg ="you dont have this friend"
+      end
+    else
+      @msg ='we canot found friend with this name'    
+     end
+  end
+
  end
  
  def group_params

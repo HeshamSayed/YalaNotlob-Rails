@@ -14,10 +14,6 @@ Rails.application.routes.draw do
   root to: "orders#index"
 
   end
-
-
-
-
   get '/addGroup', :controller => 'groups', :action => 'add'
   post '/addGroup', :controller => 'groups', :action => 'addgroup'
   get '/addGroupMember', :controller => 'groups', :action => 'groupmember'
@@ -27,6 +23,9 @@ Rails.application.routes.draw do
   delete 'removemember/:id(.:format)', :to => 'groups#removemember'
   delete 'destroy/:id(.:format)' , :to =>'orders#destroy'
   put 'update/:id(.:format)' , :to =>'orders#update'
+  #mhdesh yshlhom
+  get '/addFriend' , :controller => 'friends', :action => 'add'
+  post '/addFriend' , :controller =>'friends' , :action =>'addfriend'
   # get 'group/delete' , :controller => 'groups', :action => 'delete'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
