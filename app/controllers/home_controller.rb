@@ -8,4 +8,5 @@ class HomeController < ApplicationController
   ).order("id Desc").last(4)
 
   end
+ 
 end
