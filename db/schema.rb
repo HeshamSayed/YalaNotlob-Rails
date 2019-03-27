@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_03_26_234024) do
 
-  create_table "friends", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "friends", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.integer "user_id"
     t.integer "friend_id"
     t.datetime "created_at", null: false
@@ -20,14 +20,14 @@ ActiveRecord::Schema.define(version: 2019_03_26_234024) do
     t.index ["user_id", "friend_id"], name: "index_friends_on_user_id_and_friend_id", unique: true
   end
 
-  create_table "groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "groups", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
   end
 
-  create_table "groups_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "groups_users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.bigint "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -36,12 +36,12 @@ ActiveRecord::Schema.define(version: 2019_03_26_234024) do
     t.index ["group_id"], name: "index_groups_users_on_group_id"
   end
 
-  create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "notification"
     t.integer "user_id"
     t.boolean "status"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2019_03_26_234024) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "order_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "order_details", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "item"
     t.integer "amount"
     t.integer "price"
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2019_03_26_234024) do
     t.index ["order_id"], name: "index_order_details_on_order_id"
   end
 
-  create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "meal"
     t.string "restaurant_name"
     t.integer "user_id"
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 2019_03_26_234024) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "orders_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "orders_users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.integer "user_id"
     t.bigint "order_id"
     t.boolean "joined"
@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 2019_03_26_234024) do
     t.index ["order_id"], name: "index_orders_users_on_order_id"
   end
 
-  create_table "taggings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "taggings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.integer "tag_id"
     t.string "taggable_type"
     t.integer "taggable_id"
@@ -99,13 +99,13 @@ ActiveRecord::Schema.define(version: 2019_03_26_234024) do
     t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
   end
 
-  create_table "tags", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "tags", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "name", collation: "utf8_bin"
     t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -114,10 +114,6 @@ ActiveRecord::Schema.define(version: 2019_03_26_234024) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "username"
-    t.string "provider"
-    t.string "uid"
-    t.string "name"
-    t.text "image"
     t.string "oauth_token"
     t.datetime "oauth_expires_at"
     t.index ["email"], name: "index_users_on_email", unique: true
