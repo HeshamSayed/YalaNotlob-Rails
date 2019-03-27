@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_27_155839) do
+ActiveRecord::Schema.define(version: 2019_03_27_171142) do
 
   create_table "friends", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_03_27_155839) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.index ["user_id", "name"], name: "index_groups_on_user_id_and_name", unique: true
   end
 
   create_table "groups_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -122,7 +123,7 @@ ActiveRecord::Schema.define(version: 2019_03_27_155839) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
-  add_foreign_key "groups_users", "groups"
+  add_foreign_key "groups_users", "groups", on_delete: :cascade
   add_foreign_key "order_details", "orders"
   add_foreign_key "orders_users", "orders", on_delete: :cascade
 end
