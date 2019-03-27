@@ -9,7 +9,7 @@ $(document).ready(function() {
     data: {some_parameter: 'hello'},
     success:function(result){
       result.forEach(element => {
-        alert(element.username);
+        // alert(element.username);
         availableUsers.push(element);
         availableTags.push(element.username);
       });

@@ -15,7 +15,7 @@ class OrdersController < ApplicationController
      
         def update
             @order = Order.find(params[:id])
-            # @order.user_id = current_user.id
+            p params[:id];
             @order.update(status: 1)
             redirect_to orders_path
         end
