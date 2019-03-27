@@ -1,10 +1,25 @@
 class OrdersController < ApplicationController
+    require 'will_paginate/array'
     def index
-        @orders = Order.all
-      
-    end
 
+        @orders = Order.where(user_id: current_user.id).paginate page: params[:page], per_page: 2
+        @invited = OrdersUser
+        # @newOrder = OrdersUser.where(user_id: current_user.id).inspect
+   end
 
+    def destroy
+        @orders = Order.find(params[:id])
+        @orders.destroy
+        redirect_to orders_path
+        end
+     
+        def update
+            @order = Order.find(params[:id])
+            # @order.user_id = current_user.id
+            @order.update(status: 1)
+            redirect_to orders_path
+        end
+  
     def new
         @order = Order.new
     end

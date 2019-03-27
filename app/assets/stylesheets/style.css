@@ -7,13 +7,14 @@ height: 100vh;
 width: 100%;
 background-repeat: no-repeat;
 overflow-x: hidden;
-background-size: 100% 100%;
+/* background-size: 100% 100%; */
 position: relative;
 }
 .general-cover{
 background-color: #171717d4;
 width: 100%;
 position: absolute;
+height: 135%!important;
 
 }
 /*=============== navbar style =========*/
@@ -394,7 +395,9 @@ list-style-type:none;
 margin-top: 50px;
 }
 
-
+.display-in{
+  display: inline-block;
+}
 /*=============== end add order style ==========*/
 
 
@@ -607,17 +610,16 @@ padding-left: 25px;
 font-family:Impact;
 }
 .but{
-width: 100px;
-height: 50px;
-font-size: 25px;
+width: 120px;
+height: 40px;
+font-size: 20px;
 border-color: none;
-color:#000;
-background-color: #06994fc9;
-margin-left: 35px;
+color:rgb(14, 13, 13);
+background-color: #06994fab;
+margin-left: 50px;
 border-radius: 10px;
-font-size: 30px;
-font-family: impact;
-font-weight: bold;
+margin-bottom: 20px;
+
 }
 .email{
 width: 400px;
@@ -653,3 +655,9 @@ overflow-y: auto;
 .left h2{
  color: #dc4443;
 }
+
+/* .custom-error-message
+{
+  background: transparent !important;
+border: transparent !important;
+} */

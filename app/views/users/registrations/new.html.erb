@@ -1,10 +1,13 @@
 <div class="general-cover" >
 <div class="login-form">
+<%= render "devise/shared/error_messages", resource: resource %>
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+
    <div class="heading">Yall Notlb</div>
   <div class="sform">
   <div class="field">
+  <%= f.hidden_field :image, value: "character.png" %>
   <%= f.label :username %><br />
   <%= f.text_field :username, autofocus: true, autocomplete: "username" %>
  </div>
@@ -28,8 +31,13 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+  <%= f.submit "Sign up",class:"but" %>
   </div>
   </div>
   
 <% end %>
+
+
+ 
+
+
