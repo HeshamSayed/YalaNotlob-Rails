@@ -3,7 +3,7 @@
 
 
 <%= render "home/navbar"%>
-
+    <% if !@order.status%>
         <!-- add order-->
         <div class="group-content">
             <div class="container">
@@ -16,7 +16,6 @@
                 <br>
             </div>
         </div>
-
 
         <div class="container">
 
@@ -39,7 +38,7 @@
                         <span></span>
                     </div>
                 </div>
-
+                
                 <div class="form-group row">
                     <%= form_for(:order_detail, url: "/orders/#{@order.id}/details", method: "post") do |form| %>
                         <div class="col-3 display-in">
@@ -61,6 +60,7 @@
                 </div>
             </div>
         </div>
+        <% end %>
 
         <!-- order details -->
         <div class="container">
@@ -148,7 +148,9 @@
                                                     <div class="content-heading">
                                                         <h3><%= @currentUser.username %></h3>
                                                     </div>
+                                                    <% if !@order.status%>
                                                     <a href="">Remove</a>
+                                                    <% end %>
                                                 </div>
 
                                             </div>
