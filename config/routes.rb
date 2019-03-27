@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   #mhdesh yshlhom
   get '/addFriend' , :controller => 'friends', :action => 'add'
   post '/addFriend' , :controller =>'friends' , :action =>'addfriend'
+  get '/friendActivity' , :controller => 'home', :action => 'friendactivity'
   # get 'group/delete' , :controller => 'groups', :action => 'delete'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

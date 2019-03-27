@@ -1,0 +1,7 @@
+<p>
+    <%= User.find_by_id(order.user_id).username %>
+        has created an order for
+              <%= order.meal %> 
+              from
+            <%= order.restaurant_name %>
+</p>
