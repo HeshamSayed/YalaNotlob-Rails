@@ -1,0 +1,39 @@
+
+<%= form_with model: @order, local: true do |form| %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <p class="field">
+      <%= form.label :restaurant_name %><br>
+      <%= form.text_field :restaurant_name %>
+    </p>
+   
+    <p class="field">
+    <%= form.label :meal %><br>
+    <%= select(:order, :meal, [['breakfast'], ['dinner'], ['lunch'],['snack']]) %>
+    </p>
+
+
+    <div class="field">
+    add a menu image....
+    <%= form.file_field :menu_image %>
+  </div>
+
+  <button class="click">click</button>
+  <div>
+  <label for="tags">Friends: </label>
+  <input id="tags">
+  </div>
+
+
+  <div id="invite-list">
+  <ul>
+  </ul>
+  </div>
+
+    <p>
+      <%= form.submit %>
+    </p>
+   
+  <% end %>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>

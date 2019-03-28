@@ -1,0 +1,16 @@
+ <% if !friend.nil? %>
+<div class="single-friend ">
+                <%=image_tag(friend.user.image, :width => 50, :height => 50, :crop => :fill) %>
+<<<<<<< HEAD
+                <p style="color:#fff"> <%= friend.user.username %> </p> 
+             
+                <%= link_to 'unfriend', friend,
+=======
+                <p style="color:#000"> <%= friend.user.username %> </p> 
+                <%# <span style="color:#ce130c;">Un Friend</span> %>
+                <%= link_to 'UnFriend', friend,
+>>>>>>> cf2dac9eec1594d10f9f4516310379d54aba29ad
+              method: :delete,
+              data: { confirm: 'Are you sure?' } ,:remote => true ,:style => "color:#ce130c;""padding-left:5px;" ,:class=>'custom-delete-friend' %>
+               </div>
+<% end %>

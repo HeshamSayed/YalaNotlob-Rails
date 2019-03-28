@@ -1,0 +1,222 @@
+
+<body class="bg-body">
+
+
+<%= render "home/navbar"%>
+    <% if !@order.status%>
+        <!-- add order-->
+        <div class="group-content">
+            <div class="container">
+                <br><br>
+                <div class="row">
+                    <div class="col-12">
+                        <h1>Add Order</h1>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="add-orders">
+
+                <div class="form-group row">
+                    <div class="col-3">
+                        <span>Item</span>
+                    </div>
+                    <div class="col-2">
+                        <span>Amount</span>
+                    </div>
+                    <div class="col-2">
+                        <span>Price</span>
+                    </div>
+                    <div class="col-3">
+                        <span>Comment</span>
+                    </div>
+                    <div class="col-2">
+                        <span></span>
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <%= form_for(:order_detail, url: "/orders/#{@order.id}/details", method: "post") do |form| %>
+                        <div class="col-3 display-in">
+                            <%= form.text_field(:item ,id: 'example-text-input', class: 'form-control', maxlength: 30)%>
+                        </div>
+                        <div class="col-2 display-in">
+                            <%= form.number_field(:amount ,id: 'example-number-input', class: 'form-control',value: 3 , in: 0..100)%>
+                        </div>
+                        <div class="col-2 display-in">
+                            <%= form.number_field(:price, id: 'example-number-input', class:'form-control', value: 3, in:0..100)%>
+                        </div>
+                        <div class="col-3 display-in">
+                            <%= form.text_field(:comment, id: 'example-text-input', class: 'form-control', maxlength: 100)%>
+                        </div>
+                        <div class="col-2 display-in">
+                            <%= form.submit(value:"Add", class:"btn btn-outline-danger")%>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+        <% end %>
+
+        <!-- order details -->
+        <div class="container">
+            <div class="group-content">
+
+                <br><br>
+                <div class="row">
+                    <div class="col-12">
+                        <h1>Order Details</h1>
+                    </div>
+                </div>
+                <br>
+            </div>
+
+
+            <div class="row">
+                <div class="col-7">
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar" style="overflow: auto;
+                    max-height: 200px;margin-bottom: 70px;">
+                        <table class="table table-hover ">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Person</th>
+                                    <th scope="col">Item</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Comment</th>
+                                    <th scope="col">Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <% @order.order_details.each do |detail| %>
+                                <% @name = User.find(detail.user_id) %>
+                                <tr>
+                                    <td><%= @name.username %></td>
+                                    <td><%= detail.item %></td>
+                                    <td><%= detail.amount %></td>
+                                    <td><%= detail.price %></td>
+                                    <td><%= detail.comments %></td>
+                                    <% if !@order.status %>
+                                    <td>
+                                        <% if @name.id == current_user.id || @order.user_id == current_user.id%>
+                                            
+                                            <%= link_to 'Delete', "/orders/#{@order.id}/details/#{detail.id}",
+                                            method: :delete,
+                                            data: { confirm: 'Are you sure?' , remote: true}, class:"delete" %>
+                                        <% end %>
+                                    </td>
+                                    <% end %>
+                                </tr>
+                            <% end %>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-5 source-padal">
+                    <a href="" data-toggle="modal" data-target="#exampleModalCenter">
+                        <p><%= @invited.where(order_id: @order.id).count%> Friends invited, Click to view</p>
+                    </a>
+                    <a href="" data-toggle="modal" data-target="#exampleModalCenter2">
+                        <p><%= @invited.where(order_id: @order.id, joined: 1).count %> Friends joined, Click to view</p>
+                    </a>
+                    <!-- Modal 1 -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Invited Friends</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <% @value = @invited.where(order_id: @order.id)%>
+                                <% @value.each do |id| %>
+                                <% @currentUser = User.find(id.user_id)%>
+                                
+                                <div class="modal-body">
+                                    <div class="row">
+                                            <div class="col-6">
+
+                                                <div class="span4">
+                                                <%=image_tag(@currentUser.image, :width => 50, :height => 50, :crop => :fill, class:"img-left") %>
+                                                    <div class="content-heading">
+                                                        <h3><%= @currentUser.username %></h3>
+                                                    </div>
+                                                    <% if !@order.status %>
+                                                    <% if @order.user_id == current_user.id %>
+                                                    <a href="">Remove</a>
+                                                    <% end %>
+                                                    <% end %>
+                                                </div>
+
+                                            </div>
+                                    </div>
+                                </div>
+                                            
+                                <% end %>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal 1 -->
+
+                    <!-- Modal 2 -->
+                    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Joined Friends</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <% @newvalue = @invited.where(order_id: @order.id ,joined: 1)%>
+                                <% @newvalue.each do |id| %>
+                                <% @newcurrentUser = User.find(id.user_id)%>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        
+                                        <div class="col-6">
+
+                                            <div class="span4">
+                                            <%=image_tag(@newcurrentUser.image, :width => 50, :height => 50, :crop => :fill) %>
+                                                <div class="content-heading">
+                                                    <h3><%= @newcurrentUser.username %></h3>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <% end %>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal 2 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app/assets/javascripts/notification.js"></script>
+</body>
+
+</html>

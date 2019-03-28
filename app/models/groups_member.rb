@@ -1,0 +1,2 @@
+class GroupsMember < ApplicationRecord
+end
