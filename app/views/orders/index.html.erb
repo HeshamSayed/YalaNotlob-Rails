@@ -50,22 +50,22 @@
           <%if order.status == false %>
            
           <%= button_to order_path(order), 
-          method: :put,
+          method: :put,class: "btn",
           data: { confirm: 'Are you sure?' } , form: {style: 'display:inline-block;margin:0'} do %>
-              <i class='fas fa-trash'></i>Done
+            <i class="fas fa-2x fa-check-circle"></i>
          <% end %>
            
             <%= button_to order_path(order),
-            method: :delete,
+            method: :delete,class: "btn",
             data: { confirm: 'Are you sure?' } , form: {style: 'display:inline; margin:0'} do %>
-                <i class='fas fa-trash'></i>Cancel
+              <i class="fas fa-2x fa-times-circle"></i>
                <% end %>
              <% end %> 
        
              <%= button_to order_details_path(order),
-             method: :get,
+             method: :get,class: "btn",
              form: {style: 'display:inline-block;margin:0'} do %>
-                 <i class='far fa-eye'></i>View
+              <i class="far fa-2x fa-eye"></i>
 <% end %>
 
 
