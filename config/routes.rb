@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   get '/test', :controller => 'orders', :action => 'test'
   get '/group', :controller => 'orders', :action => 'group'
   post '/save', :controller => 'orders', :action => 'save'
+  get '/member', :controller => 'orders', :action => 'member'
   #get '/save', :controller => 'orders', :action => 'saveadd'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
