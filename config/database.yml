@@ -13,17 +13,11 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-<<<<<<< HEAD
-  username: fatema
-  password: 
-  socket: /var/lib/mysql/mysql.sock
-=======
   database: sql2285640
   username: sql2285640
   password: wA5%uF9%
   host: sql2.freemysqlhosting.net
   port: 3306
->>>>>>> cf2dac9eec1594d10f9f4516310379d54aba29ad
 
 development:
   <<: *default
