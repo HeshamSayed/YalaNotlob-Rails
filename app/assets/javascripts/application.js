@@ -19,3 +19,19 @@
 //= require popper
 //= require bootstrap
 //= require_tree .
+// alert("hhhh")
+
+  App.notification.received = (data)=>{
+    
+                        var textnode = document.createTextNode(data['message']);
+                      
+                        document.getElementById("allNotifications").appendChild(textnode);
+                        var button = document.createElement("input");
+                          button.type = "button";
+                          button.value = "join";
+                          button.onclick = func;
+                         
+                        document.getElementById("allNotifications").appendChild(textnode);
+                        document.getElementById("allNotifications").appendChild(button);
+
+}

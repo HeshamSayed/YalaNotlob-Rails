@@ -16,6 +16,7 @@
     <%= yield %>
   
   <script>
+  
       $(document).ready(function () {
           $(document).on('change', '.btn-file :file', function () {
               var input = $(this),
@@ -31,7 +32,7 @@
               if (input.length) {
                   input.val(log);
               } else {
-                  if (log) alert(log);
+                
               }
 
           });

@@ -23,35 +23,7 @@
           <%= render partial: "activity", collection: @orders , :as => :order  %>
     </div>
   </div>
-
-  chat: <span id="chat"></span>
-  <hr>
-  <br>
-  message:
-  <br>
-  <textarea id="msg"></textarea>
-  <hr>
-  <button id="send">send</button>
   
-  <script>
-   $(document).ready(function(){
-     
-    App.notification.received = function(data)
-    {
-      alert(data['message'])
-    }
-
-     $("#send").click(function(){
-      msg = $("#msg").val()
-      App.notification.send_notifi(msg)
-     })
-   })
-  </script>
-
-
-
-
-
 
 </div>
 </body>

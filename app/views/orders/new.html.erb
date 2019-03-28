@@ -1,9 +1,11 @@
 
 <%= form_with model: @order, local: true do |form| %>
 
+
+  <span class="ownername"><%=current_user.username%></span>
     <p class="field">
       <%= form.label :restaurant_name %><br>
-      <%= form.text_field :restaurant_name %>
+      <%= form.text_field :restaurant_name , :class=>'rest-name' %>
     </p>
    
     <p class="field">
@@ -32,6 +34,7 @@
   <p>
      
   <%=  submit_tag "Go", :id=> "sendNotification" %>
+  <button onclick="sendNoification()">test</button>
 </p>
    
   <% end %>
