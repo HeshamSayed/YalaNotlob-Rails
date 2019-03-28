@@ -1,8 +1,9 @@
 class Order < ApplicationRecord
     validates :restaurant_name, presence: true,
-                    length: { minimum: 5 }
+                    length: { minimum: 3 }
     validates :meal, presence: true
-    validates :menu_image, presence: true
+    has_many :order_users, dependent: :delete_all
+  
     has_many :order_details
     belongs_to :user
     acts_as_taggable_on :tags

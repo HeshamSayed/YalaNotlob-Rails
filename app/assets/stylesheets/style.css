@@ -89,6 +89,10 @@ color: #d44435;
   color: #d44435;
 }
 }
+
+.profile_style_image{
+  border-radius: 30px;
+}
 /*=============== navbar style =========*/
 
 /*=============== notification =========*/
@@ -371,6 +375,17 @@ width: 100%!important;
 .bootstrap-tagsinput .tag {
 color: #dc4443!important;
 }
+
+.add-orders input[type="text"]{
+  width: 100%;
+  padding: 5px;
+  margin: 0 0;
+}
+.add-orders .mybutton{
+  color: white;
+  background-color: #ffffff00;
+  border: none;
+}
 /*=============== end add order style ==========*/
 
 /*=============== start add order style ==========*/
@@ -397,6 +412,18 @@ margin-top: 50px;
 
 .display-in{
   display: inline-block;
+}
+
+.ui-menu-item{
+  color: #dc4443!important;
+  font-size: 18px;
+}
+.remove {
+  background-color: #dc4443!important;
+  border: none;
+}
+.btn-outline{
+  width: 150px!important;
 }
 /*=============== end add order style ==========*/
 
