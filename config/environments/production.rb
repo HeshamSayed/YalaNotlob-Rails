@@ -10,6 +10,19 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "example.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["yalaNotlobApp@gmail.com"],
+    password:ENV["engamlfci19"]
+  }
+
+  # doesn't have to be Heroku, but you get the idea.
+  config.action_mailer.default_url_options = { :host => 'yalanotlob-rails.herokuapp.com' }
+
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true

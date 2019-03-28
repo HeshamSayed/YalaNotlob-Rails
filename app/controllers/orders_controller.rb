@@ -1,11 +1,13 @@
 class OrdersController < ApplicationController
-    require 'will_paginate/array'
-    def index
 
-        @orders = Order.where(user_id: current_user.id).paginate page: params[:page], per_page: 2
-        @invited = OrdersUser
-        # @newOrder = OrdersUser.where(user_id: current_user.id).inspect
-   end
+require 'will_paginate/array'
+def index
+
+    @orders = Order.where(user_id: current_user.id).paginate page: params[:page], per_page: 2
+    @invited = OrdersUser
+    # @newOrder = OrdersUser.where(user_id: current_user.id).inspect
+end
+    
 
     def destroy
         @orders = Order.find(params[:id])
@@ -30,14 +32,19 @@ class OrdersController < ApplicationController
         @order.user_id = current_user.id
         @order.status=0
         @order.save
+        @owner=current_user.username
         if @order.save
           #  logger.debug "\n#{params[:friends}\n";
-           logger.debug "\n#{order_params[:friends]}\n";
+           #logger.debug "\n#{order_params[:friends]}\n";
 
            for friend in order_params[:friends]
             @user = User.where(:username => friend).first
-            @ordersUser = OrdersUser.new({"order_id"=> @order.id ,"user_id"=> @user.id })
+            @ordersUser = OrdersUser.new({"order_id"=> @order.id ,"user_id"=> @user.id ,"joined"=> 0})
             @ordersUser.save
+            @notify=@owner +" invited you to join his order from "+@order.restaurant_name;
+
+            @notification = Notification.new({"user_id"=>@user.id,"notification"=>@notify,"status"=>0})
+            @notification.save
             end
            
             redirect_to "/orders/#{@order.id}/details"
@@ -63,7 +70,19 @@ class OrdersController < ApplicationController
     end
 
 
+    def member
+        @gId = Group.where("name = ?",params[:id] ).first
+        @group = Group.find(@gId.id)
+        @members = @group.members
+        respond_to do |format|
+            format.html
+            format.json {render json: @members}
+          end
+  
+    end
+
     def group
+     
         @user = User.find(current_user.id)
         @groups = @user.groups
         respond_to do |format|
