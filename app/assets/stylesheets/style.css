@@ -23,7 +23,7 @@ height: 135%!important;
 .navbar {
   padding: 0;
   height: 85px;
-  background-color: #ffffff8f!important;
+  background-color: #ffffffa8!important;
 }
 .navbar-light .navbar-nav .nav-link{
 color: white;
@@ -88,6 +88,10 @@ color: #d44435;
 .navbar .nav-right-side a:hover{
   color: #d44435;
 }
+}
+
+.profile_style_image{
+  border-radius: 30px;
 }
 /*=============== navbar style =========*/
 
@@ -371,6 +375,17 @@ width: 100%!important;
 .bootstrap-tagsinput .tag {
 color: #dc4443!important;
 }
+
+.add-orders input[type="text"]{
+  width: 100%;
+  padding: 5px;
+  margin: 0 0;
+}
+.add-orders .mybutton{
+  color: white;
+  background-color: #ffffff00;
+  border: none;
+}
 /*=============== end add order style ==========*/
 
 /*=============== start add order style ==========*/
@@ -397,6 +412,18 @@ margin-top: 50px;
 
 .display-in{
   display: inline-block;
+}
+
+.ui-menu-item{
+  color: #dc4443!important;
+  font-size: 18px;
+}
+.remove {
+  background-color: #dc4443!important;
+  border: none;
+}
+.btn-outline{
+  width: 150px!important;
 }
 /*=============== end add order style ==========*/
 
@@ -532,7 +559,7 @@ color: #fff;
 
 }
 .label3{
-  background-color: #ee4e48d7;
+  
   width: 230px;
   padding: 10px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -541,7 +568,7 @@ color: #fff;
   margin-top: 60px;
   margin-left: 150px;
   border-radius: 25px;
-  color: #fff;
+ color: #dc4443;
 
 }
 .label4{
@@ -596,9 +623,10 @@ a.start{
 color:#000;
 }
 .add{
-background-color: #dad1d1a2;
+background-color: #ffffffef;
 margin-left:70px;
 margin-right:70px;
+border-radius:20px;
 
 }
 .p{
@@ -622,7 +650,7 @@ margin-bottom: 20px;
 
 }
 .email{
-width: 400px;
+width: 4z00px;
 }
 .frl{
 background-color: #06994fc9;
@@ -637,13 +665,17 @@ font-weight: bold;
 }
 
 .frlist{
-background-color: #dad1d1a2;
+background-color: #0f0f0fec;
 border-radius: 15px;
 margin-left:70px;
 margin-right:70px;
 overflow-y: auto;
   max-height:300px;
+  min-height:300px;
   padding-left: 20px;
+  max-width: 500px;
+  min-width: 500px;
+  padding-top: 10px;
 }
 
 /* p{

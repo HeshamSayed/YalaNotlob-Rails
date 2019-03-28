@@ -54,6 +54,7 @@
 
           <%if order.status == false %>
            
+<<<<<<< HEAD
           <%= link_to 'change', 
           { :controller => 'orders', :action => 'update', :id => order.id }, 
           {:confirm => 'Are you sure?', :method => :put }%>
@@ -62,6 +63,27 @@
             {:confirm => 'Are you sure?', :method => :delete }%>
            
             <% end %>
+=======
+          <%= button_to order_path(order), 
+          method: :put,class: "btn",
+          data: { confirm: 'Are you sure?' } , form: {style: 'display:inline-block;margin:0'} do %>
+            <i class="fas fa-2x fa-check-circle"></i>
+         <% end %>
+           
+            <%= button_to order_path(order),
+            method: :delete,class: "btn",
+            data: { confirm: 'Are you sure?' } , form: {style: 'display:inline; margin:0'} do %>
+              <i class="fas fa-2x fa-times-circle"></i>
+               <% end %>
+             <% end %> 
+       
+             <%= button_to order_details_path(order),
+             method: :get,class: "btn",
+             form: {style: 'display:inline-block;margin:0'} do %>
+              <i class="far fa-2x fa-eye"></i>
+<% end %>
+
+>>>>>>> 650800bcf8805028721799f4d47e94d0196656bb
 
        
         <%= link_to 'view', order_details_path(order) ,class: "a view"%>

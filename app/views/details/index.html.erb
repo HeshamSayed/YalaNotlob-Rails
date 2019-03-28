@@ -41,7 +41,7 @@
                 
                 <div class="form-group row">
                     <%= form_for(:order_detail, url: "/orders/#{@order.id}/details", method: "post") do |form| %>
-                        <div class="col-3 display-in">
+                        <div class="col-2 display-in">
                             <%= form.text_field(:item ,id: 'example-text-input', class: 'form-control', maxlength: 30)%>
                         </div>
                         <div class="col-2 display-in">
@@ -50,10 +50,10 @@
                         <div class="col-2 display-in">
                             <%= form.number_field(:price, id: 'example-number-input', class:'form-control', value: 3, in:0..100)%>
                         </div>
-                        <div class="col-3 display-in">
+                        <div class="col-2 display-in">
                             <%= form.text_field(:comment, id: 'example-text-input', class: 'form-control', maxlength: 100)%>
                         </div>
-                        <div class="col-2 display-in">
+                        <div class="col-1 display-in">
                             <%= form.submit(value:"Add", class:"btn btn-outline-danger")%>
                         </div>
                     <% end %>

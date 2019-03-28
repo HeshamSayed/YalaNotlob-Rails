@@ -16,12 +16,12 @@ Rails.application.configure do
     domain: "example.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: ENV["yalaNotlobApp@gmail.com"],
-    password:ENV["engamlfci19"]
+    user_name: ENV["GMAIL_USERNAME"],
+    password:ENV["GMAIL_PASSWORD"]
   }
 
   # doesn't have to be Heroku, but you get the idea.
-  config.action_mailer.default_url_options = { :host => 'yourhostsite.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'https://yalanotlob-rail.herokuapp.com' }
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
@@ -36,7 +36,8 @@ Rails.application.configure do
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  # config.assets.js_compressor = :uglifier
+  config.assets.js_compressor = Uglifier.new(harmony: true)
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
@@ -85,6 +86,7 @@ Rails.application.configure do
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
+#   config.i18n.fallbacks = [I18n.default_locale]
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
@@ -104,17 +106,5 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
 end
-
-
-# Disable Rails's static asset server (Apache or nginx will already do this)  
-config.serve_static_assets = false
-
-# Compress JavaScripts and CSS  
-config.assets.compress = true
-
-# Don't fallback to assets pipeline if a precompiled asset is missed  
-config.assets.compile = false
-
-# Generate digests for assets URLs  
-config.assets.digest = true

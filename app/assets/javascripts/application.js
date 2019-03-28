@@ -26,12 +26,14 @@
                         var textnode = document.createTextNode(data['message']);
                       
                         document.getElementById("allNotifications").appendChild(textnode);
-                        var button = document.createElement("input");
-                          button.type = "button";
-                          button.value = "join";
-                          button.onclick = func;
-                         
-                        document.getElementById("allNotifications").appendChild(textnode);
-                        document.getElementById("allNotifications").appendChild(button);
+                        var a = document.createElement("a");
+                        var newItem = document.createElement("li");
+
+                        a.textContent = "...ooo";
+                        a.setAttribute('href', "http://www.google.com");
+                        newItem.appendChild(a);
+                        document.getElementById("allNotifications").appendChild(newItem);
+
+                        
 
 }

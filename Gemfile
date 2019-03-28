@@ -5,7 +5,7 @@ ruby '2.6.0'
 
 
 gem 'htmlbeautifier'
-
+gem 'yarn', '~> 0.1.1'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'

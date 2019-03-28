@@ -1,11 +1,11 @@
 class HomeController < ApplicationController
   def index
-    @lastOrder = Order.where(user_id: current_user.id).order("id Desc").last(5)
+    @lastOrder = Order.where(user_id: current_user.id).order("id Desc").last(4)
    
     @orders = Order.where(
       user_id: Friend.select("friend_id")
       .where(user_id: current_user.id)
-  ).order("id Desc").last(4)
+  ).order("id Desc").last(3)
 
   end
 
