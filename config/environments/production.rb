@@ -21,7 +21,7 @@ Rails.application.configure do
   }
 
   # doesn't have to be Heroku, but you get the idea.
-  config.action_mailer.default_url_options = { :host => 'yalanotlob-rails.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'https://yalanotlob-rails.herokuapp.com' }
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
@@ -85,8 +85,8 @@ Rails.application.configure do
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
-  # config.i18n.fallbacks = true
-  config.i18n.fallbacks = [I18n.default_locale]
+  config.i18n.fallbacks = true
+#   config.i18n.fallbacks = [I18n.default_locale]
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
@@ -107,16 +107,4 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   
-  
-  # Disable Rails's static asset server (Apache or nginx will already do this)  
-  config.serve_static_assets = true
-  
-  # Compress JavaScripts and CSS  
-  config.assets.compress = true
-  
-  # Don't fallback to assets pipeline if a precompiled asset is missed  
-  config.assets.compile = true
-  
-  # Generate digests for assets URLs  
-  config.assets.digest = true
 end
