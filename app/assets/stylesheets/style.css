@@ -596,9 +596,10 @@ a.start{
 color:#000;
 }
 .add{
-background-color: #ebe6e6ef;
+background-color: #ffffffef;
 margin-left:70px;
 margin-right:70px;
+border-radius:20px;
 
 }
 .p{
@@ -622,7 +623,7 @@ margin-bottom: 20px;
 
 }
 .email{
-width: 400px;
+width: 4z00px;
 }
 .frl{
 background-color: #06994fc9;
@@ -637,13 +638,17 @@ font-weight: bold;
 }
 
 .frlist{
-background-color: #dad1d1a2;
+background-color: #0f0f0fec;
 border-radius: 15px;
 margin-left:70px;
 margin-right:70px;
 overflow-y: auto;
   max-height:300px;
+  min-height:300px;
   padding-left: 20px;
+  max-width: 500px;
+  min-width: 500px;
+  padding-top: 10px;
 }
 
 /* p{
