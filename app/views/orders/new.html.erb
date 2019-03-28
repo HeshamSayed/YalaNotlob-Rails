@@ -1,6 +1,5 @@
 
 <%= form_with model: @order, local: true do |form| %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <p class="field">
       <%= form.label :restaurant_name %><br>
@@ -30,10 +29,12 @@
   </ul>
   </div>
 
-    <p>
-      <%= form.submit %>
-    </p>
+  <p>
+     
+  <%=  submit_tag "Go", :id=> "sendNotification" %>
+</p>
    
   <% end %>
 
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+

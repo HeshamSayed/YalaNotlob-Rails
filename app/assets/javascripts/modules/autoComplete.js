@@ -72,6 +72,10 @@ $(document).ready(function() {
               .find("li.hidden")
               .fadeIn();
               tagss.push(element.username);
+              availableUsers.map(element=>{
+                alert(`${element.username},Invitation`);
+            })
+             App.notification.send_msg(msg)
             });
           }
         })
@@ -90,10 +94,19 @@ $(document).ready(function() {
         .find("li.hidden")
         .fadeIn();
         tagss.push(ui.item.value);
-      
+        availableUsers.map(element=>{
+          alert(`${element.username},Invitation`);
+      })
+       App.notification.send_msg(msg)
       }
+
      
-    }}
+    }
+  
+    
+  }
+
+    
   });
 
 
