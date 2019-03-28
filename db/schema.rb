@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2019_03_28_091757) do
   create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "notification"
     t.bigint "user_id"
-    t.boolean "status"
+    t.boolean "status", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "fk_rails_b080fb4855"
@@ -122,7 +122,7 @@ ActiveRecord::Schema.define(version: 2019_03_28_091757) do
     t.string "oauth_token"
     t.datetime "oauth_expires_at"
     t.text "image"
-    t.string "provider"
+    t.string "provider", limit: 4
     t.string "uid"
     t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
