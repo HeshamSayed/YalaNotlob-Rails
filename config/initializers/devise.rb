@@ -297,7 +297,7 @@ Devise.setup do |config|
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
 
-  config.omniauth :facebook, "411909196304192", "5848fbfb96e66d7a62e27efac43fec04", callback_url: "http://yalanotlob-rails.herokuapp.com/users/auth/facebook/callback"
+  config.omniauth :facebook, "411909196304192", "5848fbfb96e66d7a62e27efac43fec04", callback_url: "https://yalanotlob-rail.herokuapp.com/users/auth/facebook/callback"
   config.omniauth :google_oauth2, '8480870150-rk9ruq7mkmsje89hge863n40smc3k9e2.apps.googleusercontent.com', 'DzOChFO6JsYvgr6FHWPcHn8p'
 
 end
