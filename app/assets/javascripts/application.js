@@ -19,3 +19,21 @@
 //= require popper
 //= require bootstrap
 //= require_tree .
+// alert("hhhh")
+
+  App.notification.received = (data)=>{
+    
+                        var textnode = document.createTextNode(data['message']);
+                      
+                        document.getElementById("allNotifications").appendChild(textnode);
+                        var a = document.createElement("a");
+                        var newItem = document.createElement("li");
+
+                        a.textContent = "...ooo";
+                        a.setAttribute('href', "http://www.google.com");
+                        newItem.appendChild(a);
+                        document.getElementById("allNotifications").appendChild(newItem);
+
+                        
+
+}

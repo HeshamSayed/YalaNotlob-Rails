@@ -4,7 +4,8 @@ function checkGroup($name){
 
   var found = availableGroups.includes($name);
 }
-
+let user;
+let tagss=[];
 $(document).ready(function() {
   let availableUsers = [];
   let availableGroups = [];
@@ -39,7 +40,7 @@ $(document).ready(function() {
   })
 
   let tags=[];
-  let tagss=[];
+ 
   $("#tags").autocomplete({
     source: availableTags,
 
@@ -72,6 +73,7 @@ $(document).ready(function() {
               .find("li.hidden")
               .fadeIn();
               tagss.push(element.username);
+             
             });
           }
         })
@@ -90,10 +92,17 @@ $(document).ready(function() {
         .find("li.hidden")
         .fadeIn();
         tagss.push(ui.item.value);
-      
+        user=ui.item.value;
+        
       }
+
      
-    }}
+    }
+  
+    
+  }
+
+    
   });
 
 
@@ -104,3 +113,36 @@ $(document).ready(function() {
       .remove();
   });
 });
+
+
+
+function sendNoification(){
+        // //msg format userid,type,orderid,msg
+        // selectedUsers.map(user=>{
+        //     alert(`${user},Invitation,${current_user_name}`);
+        // })
+        $(".test-notify").append("ghghfghhffhhf");
+        tagss.forEach(element=>{
+          
+          //$("#notifications").css("display","block");
+          App.notification.send_notifi(`${element},${$(".ownername").text()} is invited you to join his order from ${$(".rest-name").val()} `);
+          console.log("message sent")
+        })
+        
+    }
+
+
+// function sendNoification(){
+//   // //msg format userid,type,orderid,msg
+//    selectedUsers.map(user=>{
+//   //     alert(${user},Invitation,${current_user_name});
+//    $(".test-notify").append("ghghfghhffhhf");
+//    })
+//   tagss.forEach(element=>{
+    
+//     //$("#notifications").css("display","block");
+//     App.notification.send_notifi(${element},${$(".ownername").text()} is invited you to join his order from ${$(".rest-name").val()});
+   
+//   })
+  
+// }

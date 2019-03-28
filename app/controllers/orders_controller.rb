@@ -42,9 +42,15 @@ end
             @ordersUser = OrdersUser.new({"order_id"=> @order.id ,"user_id"=> @user.id ,"joined"=> 0})
             @ordersUser.save
             @notify=@owner +" invited you to join his order from "+@order.restaurant_name;
-
+            
             @notification = Notification.new({"user_id"=>@user.id,"notification"=>@notify,"status"=>0})
             @notification.save
+
+           
+
+
+
+
             end
            
             redirect_to "/orders/#{@order.id}/details"
