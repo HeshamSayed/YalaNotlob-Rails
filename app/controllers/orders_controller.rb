@@ -1,11 +1,13 @@
 class OrdersController < ApplicationController
-    require 'will_paginate/array'
-    def index
 
-        @orders = Order.where(user_id: current_user.id).paginate page: params[:page], per_page: 2
-        @invited = OrdersUser
-        # @newOrder = OrdersUser.where(user_id: current_user.id).inspect
-   end
+require 'will_paginate/array'
+def index
+
+    @orders = Order.where(user_id: current_user.id).paginate page: params[:page], per_page: 2
+    @invited = OrdersUser
+    # @newOrder = OrdersUser.where(user_id: current_user.id).inspect
+end
+    
 
     def destroy
         @orders = Order.find(params[:id])
@@ -63,7 +65,19 @@ class OrdersController < ApplicationController
     end
 
 
+    def member
+        @gId = Group.where("name = ?",params[:id] ).first
+        @group = Group.find(@gId.id)
+        @members = @group.members
+        respond_to do |format|
+            format.html
+            format.json {render json: @members}
+          end
+  
+    end
+
     def group
+     
         @user = User.find(current_user.id)
         @groups = @user.groups
         respond_to do |format|
