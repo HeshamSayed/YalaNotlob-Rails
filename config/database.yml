@@ -13,20 +13,36 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: 
-  socket: /var/lib/mysql/mysql.sock
+  database: sql2285640
+  username: sql2285640
+  password: wA5%uF9%
+  host: sql2.freemysqlhosting.net
+  port: 3306
 
 development:
   <<: *default
-  database: yalanotlob_development
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: sql2285640
+  username: sql2285640
+  password: wA5%uF9%
+  host: sql2.freemysqlhosting.net
+  port: 3306
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: yalanotlob_test
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: sql2285640
+  username: sql2285640
+  password: wA5%uF9%
+  host: sql2.freemysqlhosting.net
+  port: 3306
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +65,11 @@ test:
 #
 production:
   <<: *default
-  database: yalanotlob_production
-  username: yalanotlob
-password: <%= ENV['YALANOTLOB_DATABASE_PASSWORD'] %>
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: sql2285640
+  username: sql2285640
+  password: wA5%uF9%
+  host: sql2.freemysqlhosting.net
+  port: 3306
