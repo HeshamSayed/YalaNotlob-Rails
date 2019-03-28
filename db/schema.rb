@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2019_03_28_085412) do
   create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "notification"
     t.bigint "user_id"
-    t.boolean "status"
+    t.boolean "status", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "fk_rails_b080fb4855"
