@@ -19,18 +19,8 @@
     <div class="label2">
       Friend Activity
     </div>
-    <div class="info">
-      <p>
-       
-        <% @friendActivity.each do |order|%>
-          <p>
-          <span style="color: #ee4e48; font-style: italic; "> <%= User.find_by_id(order.user_id).username %>
-            </span> has created an order for
-                    <%= order.meal %> 
-                    from
-                    <span style="color: #ee4e48; font-style: italic; "> <%= order.restaurant_name %>
-                    </span> </p>
-          <% end %>  
+    <div class="info custom-activity-updates">
+          <%= render partial: "activity", collection: @orders , :as => :order  %>
     </div>
   </div>
 </div>
