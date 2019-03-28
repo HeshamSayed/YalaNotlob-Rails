@@ -17,7 +17,7 @@ end
      
         def update
             @order = Order.find(params[:id])
-            # @order.user_id = current_user.id
+            p params[:id];
             @order.update(status: 1)
             redirect_to orders_path
         end
@@ -28,7 +28,6 @@ end
 
     def create 
         #logger.debug "\n#{params[:tags]}\n";
-        
         @order = Order.new({"meal"=>order_params[:meal] , "restaurant_name"=>order_params[:restaurant_name] ,"menu_image"=>order_params[:menu_image] })
         @order.user_id = current_user.id
         @order.status=0
