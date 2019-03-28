@@ -1,14 +1,17 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+
+  devise :database_authenticatable, :registerable,
+  :recoverable, :rememberable, :validatable,
+  :omniauthable, :omniauth_providers => [:facebook, :google_oauth2]
+
   has_many :groups
   has_many :users, class_name: "Friend", foreign_key: "user_id"
   has_many :order
   has_many :friend
 
-  devise :database_authenticatable, :registerable,
-  :recoverable, :rememberable, :validatable,
-  :omniauthable, :omniauth_providers => [:facebook, :google_oauth2]
+  
 
   def self.new_with_session(params, session)
     super.tap do |user|
@@ -17,7 +20,7 @@ class User < ApplicationRecord
       end
     end
   end
-  
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
     user.email = auth.info.email
