@@ -146,7 +146,7 @@
                                             <div class="col-6">
 
                                                 <div class="span4">
-                                                    <img class="img-left" width="60" src="images/character.png" />
+                                                <%=image_tag(@currentUser.image, :width => 50, :height => 50, :crop => :fill, class:"img-left") %>
                                                     <div class="content-heading">
                                                         <h3><%= @currentUser.username %></h3>
                                                     </div>
@@ -192,7 +192,7 @@
                                         <div class="col-6">
 
                                             <div class="span4">
-                                                <img class="img-left" width="60" src="images/character.png" />
+                                            <%=image_tag(@newcurrentUser.image, :width => 50, :height => 50, :crop => :fill) %>
                                                 <div class="content-heading">
                                                     <h3><%= @newcurrentUser.username %></h3>
                                                 </div>

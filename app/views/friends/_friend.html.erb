@@ -3,7 +3,7 @@
                 <%=image_tag(friend.user.image, :width => 50, :height => 50, :crop => :fill) %>
                 <p style="color:#000"> <%= friend.user.username %> </p> 
                 <%# <span style="color:#ce130c;">Un Friend</span> %>
-                <%= link_to 'Un Friend', friend,
+                <%= link_to 'UnFriend', friend,
               method: :delete,
               data: { confirm: 'Are you sure?' } ,:remote => true ,:style => "color:#ce130c;" ,:class=>'custom-delete-friend' %>
                </div>
