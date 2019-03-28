@@ -1,12 +1,12 @@
 <%= render "home/navbar" %>
 <div class="col-md-6">
         <div class="label3 Fr">
-          Friends
+        Friends
         </div>
     </div>
      
     <div class="add">
-     <span class="p">your friend email:</span> 
+   <h4>your friend email:</h4>
      <%= form_with url: "/addFriend", scope: :friend do |form| %>
                           <%= form.hidden_field :user_id, value: current_user.id %>
                           <%= form.text_field :email  , :class => "form-control" ,:placeholder =>'Email' %>        
