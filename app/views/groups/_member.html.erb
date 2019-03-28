@@ -2,7 +2,7 @@
 <div class="col-6 member_group">
 
                           <div class="span4">
-                            <img class="img-left" width="60" src="images/character.png" />
+                            <%=image_tag(member.image, :width => 50, :height => 50, :crop => :fill) %>
                             <div class="content-heading">
                               <h3> <%= member.username %> </h3>
                             </div>

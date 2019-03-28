@@ -26,7 +26,7 @@ class DetailsController < ApplicationController
         @orderDetails.user_id = current_user.id
         @orderDetails.order_id = @order.id
         @orderDetails.save
-        redirect_to "/orders/#{@order.id}/details" 
+            redirect_to "/orders/#{@order.id}/details"
     end
     def destroy
         # @order = Order.find(params[:order_id])
