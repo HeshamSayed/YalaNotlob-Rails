@@ -21,7 +21,7 @@ Rails.application.configure do
   }
 
   # doesn't have to be Heroku, but you get the idea.
-  config.action_mailer.default_url_options = { :host => 'https://yalanotlob-rails.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'https://yalanotlob-rail.herokuapp.com' }
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
