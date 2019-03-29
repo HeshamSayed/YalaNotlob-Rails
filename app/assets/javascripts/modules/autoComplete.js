@@ -1,6 +1,3 @@
-$(window).on('beforeunload', function(){
-    socket.close();
-});
 
 
 function checkGroup($name){
