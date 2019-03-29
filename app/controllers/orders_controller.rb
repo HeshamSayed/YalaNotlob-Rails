@@ -98,20 +98,7 @@ end
     end
     
 
-    def save
-        #logger.debug "\n#{params[:tags]}\n";
-        JSON.parse(params[:tags]);
-        
-    end
-
-    def saveadd
-        #logger.debug "\n#{params[:tags]}\n";
-       # @ar = JSON.parse(params[:tags]);
-        logger.debug "\n#{save}\n";
-        @user = User.where(:username => save).first
-        @orderUser = OrdersUser.new({"order_id"=> 1 ,"user_id"=> @user })
-        @OrdersUser.save
-    end
+  
 
     def joinedOrder 
         
