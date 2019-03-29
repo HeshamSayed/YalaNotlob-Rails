@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   get '/group', :controller => 'orders', :action => 'group'
   post '/save', :controller => 'orders', :action => 'save'
   get '/member', :controller => 'orders', :action => 'member'
+  get 'joinedOrder/:name(.:format)', :to => 'orders#joinedOrder'
   #get '/save', :controller => 'orders', :action => 'saveadd'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

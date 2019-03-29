@@ -113,6 +113,16 @@ end
         @OrdersUser.save
     end
 
+    def joinedOrder 
+        
+        @user = User.where(:username => params[:name]).first
+        
+        @order = Order.where(:user_id => @user.id).order('created_at DESC').first
+        @orderUser = OrdersUser.where("order_id = ? AND user_id = ?", @order.id, current_user.id)
+        @orderUser.update(joined: 1)
+        redirect_to "/orders/#{@order.id}/details"
+    end
+
     def show
         @order = Order.find(params[:id])
     end

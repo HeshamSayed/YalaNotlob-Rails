@@ -24,13 +24,14 @@
   App.notification.received = (data)=>{
     
                         var textnode = document.createTextNode(data['message']);
-                      
+                        // var name = data['message'].split(",")[1];
+                        var name= data['message'].substr(1, data['message'].indexOf(',')); 
                         document.getElementById("allNotifications").appendChild(textnode);
                         var a = document.createElement("a");
                         var newItem = document.createElement("li");
 
-                        a.textContent = "...ooo";
-                        a.setAttribute('href', "http://www.google.com");
+                        a.textContent = "accept invitation";
+                        a.setAttribute('href', `/joinedOrder/${name}`);
                         newItem.appendChild(a);
                         document.getElementById("allNotifications").appendChild(newItem);
 

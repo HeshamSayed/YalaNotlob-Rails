@@ -1,43 +1,115 @@
+<%= render "home/header" %>
+
+<body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+
 <%= form_with model: @order, local: true do |form| %>
 
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  
+   <div class="group-content add-orders">
+            <div class="container">
+                <br><br>
+                <div class="row">
+                                <div class="col-12">
+                                    <h1>Add Order</h1>
+                                </div>
+                            </div>
+                            <br>
+
+            <div class="row">
+            <div class="col-8">
     <span class="ownername"><%=current_user.username%></span>
       <p class="field">
+ <div class="row"> 
+                  <div class="col-4"> 
         <%= form.label :restaurant_name %><br>
+</div>
+                  <div class="col-8">
         <%= form.text_field :restaurant_name , :class=>'rest-name' %>
-      </p>
+ </div>
+                </div>
+              </p>
      
       <p class="field">
       <%= form.label :meal %><br>
       <%= select(:order, :meal, [['breakfast'], ['dinner'], ['lunch'],['snack']]) %>
       </p>
-  
-  
-      <div class="field">
-      add a menu image....
+   <div class="row">
+                <div class="col-4">
+                <label for="example-text-input" class="col-2 col-form-label">Menu Image:</label>
+                </div>
+
+                <div class="col-8">
       <%= form.file_field :menu_image %>
-    </div>
-  
-    <button class="click">click</button>
-    <div>
-    <label for="tags">Friends: </label>
-    <input id="tags">
-    </div>
-  
-  
-    <div id="invite-list">
-    <ul>
-    </ul>
-    </div>
-  
-    <p>
-     
-    <%=  submit_tag "Go", :id=> "sendNotification" %>
-    <button onclick="sendNoification()">test</button>
-  </p>
-     
-    <% end %>
+</div>
+                </div>
+
+
+
+              <div class="row">
+                <div class="col-4">
+
+                <label  class="col-2 col-form-label" for="tags">Friends: </label>
+              </div>
+
+              <div class="col-8">
+                <input id="tags">
+              </div>
+		<div class="col-12">
+		 <span onclick="sendNoification()" class="send" style="border:1px solid #fff;color:#fff;"> Send Invitations 			</span>
+		</div>
+                  </div>
+
+
+              <div class="row">
+                  <div class="col-4">
+                  </div>
+                  <div class="col-8">
+                      <div style="text-align: right;" class="secondary-btn">
+                            
+                          <div class="mybutton">
+                            <p>
+                              <%= form.submit%>
+                            </p>
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+
+              <% end %>
+
+            </div>
+ <div class="col-4">
+<div class="fiends-invited">
+            <div class="row">
+                <h4>Friends invited</h4>
+                <div class="col-12">
+                    <div class="span4">
+                        <img class="img-left" width="60" src="images/character.png" />
+                        
+                        <div id="invite-list">
+                          <ul>
+                          </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+            </div>
+
+
+            </div>
+            </div>
+            </div>
   
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>

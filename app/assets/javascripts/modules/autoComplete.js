@@ -114,9 +114,20 @@ $(document).ready(function() {
   });
 });
 
-
+// document.getElementById("customI").addEventListener("click", function(event){
+//   alert("hiii");
+//   // event.preventDefault()
+//   $(".test-notify").append("ghghfghhffhhf");
+//   tagss.forEach(element=>{
+    
+//     //$("#notifications").css("display","block");
+//     App.notification.send_notifi(`${element},${$(".ownername").text()} is invited you to join his order from ${$(".rest-name").val()} `);
+//     console.log("message sent")
+//   })
+// });
 
 function sendNoification(){
+  
         // //msg format userid,type,orderid,msg
         // selectedUsers.map(user=>{
         //     alert(`${user},Invitation,${current_user_name}`);
@@ -125,7 +136,7 @@ function sendNoification(){
         tagss.forEach(element=>{
           
           //$("#notifications").css("display","block");
-          App.notification.send_notifi(`${element},${$(".ownername").text()} is invited you to join his order from ${$(".rest-name").val()} `);
+          App.notification.send_notifi(`${element},${$(".ownername").text()}, is invited you to join his order from ${$(".rest-name").val()} `);
           console.log("message sent")
         })
         
