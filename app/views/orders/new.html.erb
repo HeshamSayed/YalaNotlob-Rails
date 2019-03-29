@@ -1,13 +1,6 @@
-<%= render "home/header" %>
-
-<body>
-<%= render "home/navbar"  %>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
 <%= form_with model: @order, local: true do |form| %>
-
-
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   
    <div class="group-content add-orders">
             <div class="container">
                 <br><br>
