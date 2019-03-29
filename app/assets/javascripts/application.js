@@ -25,7 +25,7 @@
     
                         var textnode = document.createTextNode(data['message']);
                         // var name = data['message'].split(",")[1];
-                        var name= data['message'].substr(1, data['message'].indexOf(',')); 
+                        var name= data['message'].substr(0, data['message'].indexOf(',')); 
                         document.getElementById("allNotifications").appendChild(textnode);
                         var a = document.createElement("a");
                         var newItem = document.createElement("li");
