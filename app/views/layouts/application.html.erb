@@ -3,20 +3,18 @@
   <title>Yalanotlob</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <%# <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.css"> %>
+  <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.css">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <%# <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> %>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body class="bg-body">
-
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
 
     <%= yield %>
   
   <script>
-  
       $(document).ready(function () {
           $(document).on('change', '.btn-file :file', function () {
               var input = $(this),
@@ -32,7 +30,7 @@
               if (input.length) {
                   input.val(log);
               } else {
-                
+                  if (log) alert(log);
               }
 
           });
@@ -55,27 +53,9 @@
   </script>
 
   <script src="notification.js"></script>
-<!--   <script>
-  $(document).ready(function(){
-  $("#sendNotification").click(function(){
-    
-      App.notification.received = function(data)
-      {
-        console.log("hdsghd");
-          $("#notifications").append(data['message']);
-          $("#notifications").css("display","block");
-      }
-      
-      var inputs = $(".tag_member");
-      for(var i = 0; i < inputs.length; i++){
-          noti = ""+ $(inputs[i]).val() + ",hi" ;
-          App.notification.send_notifi(noti);
-       }
-  
-  })
-  })
-  </script> -->
+  <script>
 
+</script>
 </body>
 
 </html>
