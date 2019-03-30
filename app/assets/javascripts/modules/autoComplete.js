@@ -136,7 +136,7 @@ function sendNoification(){
         tagss.forEach(element=>{
           
           //$("#notifications").css("display","block");
-           App.notification.send_notifi(`${element},${$(".ownername").text()} is invited you to join his order from ${$(".rest-name").val()} `);
+            App.notification.send_notifi(`${element},${$(".ownername").text()}, is invited you to join his order from ${$(".rest-name").val()} `);
           console.log("message sent")
         })
         
