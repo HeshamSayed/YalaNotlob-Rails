@@ -24,9 +24,9 @@
   App.notification.received = (data)=>{
     console.log("rece");
                         var textnode = document.createTextNode(data['message']);
-    var name ="nour";
-                        // var name = data['message'].split(",")[1];
-//                         var name= data['message'].substr(0, data['message'].indexOf(',')); 
+    //var name ="nour";
+                        var name = data['message'].split(",")[1];
+                        //var name= data['message'].substr(0, data['message'].indexOf(',')); 
                         document.getElementById("allNotifications").appendChild(textnode);
                         var a = document.createElement("a");
                         var newItem = document.createElement("li");
