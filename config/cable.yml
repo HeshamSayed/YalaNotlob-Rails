@@ -6,6 +6,6 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://:J1ggBhOHAq3HswEdFvDRyPusBFKJGHwJ@
-         redis-18237.c14.us-east-1-3.ec2.cloud.redislabs.com:18237" } %>
-#  channel_prefix: yalanotlob_production
+  url: redis://:J1ggBhOHAq3HswEdFvDRyPusBFKJGHwJ@redis-18237.c14.us-east-1-3.ec2.cloud.redislabs.com:18237
+#  url: <%= ENV.fetch("REDIS_URL") { "redis://:J1ggBhOHAq3HswEdFvDRyPusBFKJGHwJ@redis-18237.c14.us-east-1-3.ec2.cloud.redislabs.com:18237" } %>
+  channel_prefix: yalanotlob_production
