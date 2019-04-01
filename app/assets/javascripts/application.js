@@ -20,17 +20,17 @@
 //= require bootstrap
 //= require_tree .
 // alert("hhhh")
-
+alert("000");
   App.notification.received = (data)=>{
     console.log("rece");
                         var textnode = document.createTextNode(data['message']);
-    //var name ="nour";
+    //var name ="nour";alert("111");
                         var name = data['message'].split(",")[1];
                         //var name= data['message'].substr(0, data['message'].indexOf(',')); 
                         document.getElementById("allNotifications").appendChild(textnode);
                         var a = document.createElement("a");
                         var newItem = document.createElement("li");
-
+                        alert("111");
                         a.textContent = "accept invitation";
                         a.setAttribute('href', `/joinedOrder/${name}`);
                         newItem.appendChild(a);
