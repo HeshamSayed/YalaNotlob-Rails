@@ -1,0 +1,11 @@
+<h1>AllNotifications#index</h1>
+
+<table>
+<% @notifications.each do |my_noti| %>
+    <tr>
+    <div style="background-color:red;">
+        <%= my_noti.notification%>
+    </div></tr>
+<% end %>
+
+</table>
