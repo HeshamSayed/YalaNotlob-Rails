@@ -1,9 +1,9 @@
 $(document).ready(function () {
-     fetch("/all_notifications/count_all").then((data)=>{
+     fetch("/all_notifications/list").then((data)=>{
          return data.json();
      }).then((data)=>{
         $('#noti_Counter')
-        .text(data);
+        .text(data[1]);
      })
     // ANIMATEDLY DISPLAY THE NOTIFICATION COUNTER.
     $('#noti_Counter')

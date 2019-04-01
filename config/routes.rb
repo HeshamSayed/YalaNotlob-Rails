@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
   get 'all_notifications/index'
-  get 'all_notifications/count_all'
   get 'all_notifications/list'
   get 'homepage/homeindex'
   get 'home/index'
+  
   mount ActionCable.server => "/cable"
   #devise_for :users, controllers: {  sessions: 'users/sessions'}
 

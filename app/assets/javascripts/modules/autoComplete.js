@@ -127,7 +127,7 @@ $(document).ready(function() {
 // });
 
 function sendNoification(){
-  
+        console.log("mmmmmmmmmmmmmm");
         // //msg format userid,type,orderid,msg
         // selectedUsers.map(user=>{
         //     alert(`${user},Invitation,${current_user_name}`);

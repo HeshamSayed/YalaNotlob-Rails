@@ -69,9 +69,15 @@
   }).then((data)=>{
     let dd = document.getElementById("allNotifications");
     var notifications = JSON.parse(JSON.stringify(data));
-    notifications.forEach((noti)=>{
+    notifications[0].forEach((noti)=>{
       let d = document.createElement("div");
+      var a = document.createElement("a");
+      a.textContent = "accept invitation";
+      name = noti.notification.split(" ")[0]
+      console.log(name);
+      a.setAttribute('href', `/joinedOrder/${name}`);
       d.innerHTML = noti.notification;
+      d.appendChild(a)
       dd.appendChild(d);
     });
   });

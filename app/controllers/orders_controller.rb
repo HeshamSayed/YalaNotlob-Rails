@@ -46,11 +46,6 @@ end
             @notification = Notification.new({"user_id"=>@user.id,"notification"=>@notify,"status"=>0})
             @notification.save
 
-           
-
-
-
-
             end
            
             redirect_to "/orders/#{@order.id}/details"
@@ -101,7 +96,7 @@ end
   
 
     def joinedOrder 
-        
+        puts "-----------------"
         @user = User.where(:username => params[:name]).first
         
         @order = Order.where(:user_id => @user.id).order('created_at DESC').first
