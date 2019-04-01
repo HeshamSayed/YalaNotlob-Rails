@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
   root to: 'home#index'
-  get 'all_notifications/index'
-  get 'all_notifications/list'
+  get 'all_notifications/index' => "all_notifications#index"
+  get 'all_notifications/list' => "all_notifications#list"
   get 'homepage/homeindex'
   get 'home/index'
   
