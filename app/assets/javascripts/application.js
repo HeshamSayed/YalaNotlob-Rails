@@ -22,7 +22,7 @@
 // alert("hhhh")
 
   App.notification.received = (data)=>{
-    console.log("rece");
+    console.log("notification received 2")
                         var textnode = document.createTextNode(data['message']);
     //var name ="nour";alert("111");
                         var name = data['message'].split(",")[1];
