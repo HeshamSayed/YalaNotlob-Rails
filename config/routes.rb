@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'all_notifications/index'
+  get 'all_notifications/list'
   get 'homepage/homeindex'
   get 'home/index'
   mount ActionCable.server => "/cable"

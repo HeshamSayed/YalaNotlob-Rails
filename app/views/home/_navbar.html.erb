@@ -24,9 +24,11 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/orders">Orders</a>
-            
           </li>
-
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/orders">Orders</a>
+          </li>
 
           <li class="nav-item" id="noti_Container">
             <a>
@@ -42,7 +44,7 @@
                 <h3>Notifications</h3>
                 <div style="height:300px;" id="allNotifications"></div>
                 <!--noti. content-->
-                <div class="seeAll"><a href="notifications.html">See All</a></div>
+                <%= link_to "seeAll" ,  all_notifications_index_path %>           
               </div>
             </a>
           </li>
@@ -59,3 +61,19 @@
 
     </div>
   </nav>
+
+  <script>
+  
+  fetch("/all_notifications/list").then((data)=>{
+    return data.json();
+  }).then((data)=>{
+    let dd = document.getElementById("allNotifications");
+    var notifications = JSON.parse(JSON.stringify(data));
+    notifications.forEach((noti)=>{
+      let d = document.createElement("div");
+      d.innerHTML = noti.notification;
+      dd.appendChild(d);
+    });
+  });
+
+  </script>
