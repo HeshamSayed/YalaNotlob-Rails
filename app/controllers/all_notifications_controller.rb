@@ -4,7 +4,7 @@ class AllNotificationsController < ApplicationController
   end
 
   def list
-    @notifications = Notification.where(user_id: current_user.id).limit(5)
+    @notifications = Notification.where(user_id: current_user.id).last(5).reverse
     render :json => @notifications
   end
 end
