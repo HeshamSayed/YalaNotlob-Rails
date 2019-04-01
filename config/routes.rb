@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  root to: 'home#index'
   get 'all_notifications/index'
   get 'all_notifications/list'
   get 'homepage/homeindex'
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
   
 
 
-   root to: 'home#index'
+   
   # root to: 'homepage#homeindex'
   resources :orders do
     resources :details
