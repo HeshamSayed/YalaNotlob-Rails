@@ -13,9 +13,9 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: sql2285640
-  username: sql2285640
-  password: wA5%uF9%
+  database: sql2287529
+  username: sql2287529
+  password: bC5!zA3%
   host: sql2.freemysqlhosting.net
   port: 3306
 
@@ -24,9 +24,9 @@ development:
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: sql2285640
-  username: sql2285640
-  password: wA5%uF9%
+  database: sql2287529
+  username: sql2287529
+  password: bC5!zA3%
   host: sql2.freemysqlhosting.net
   port: 3306
 
@@ -38,9 +38,9 @@ test:
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: sql2285640
-  username: sql2285640
-  password: wA5%uF9%
+  database: sql2287529
+  username: sql2287529
+  password: bC5!zA3%
   host: sql2.freemysqlhosting.net
   port: 3306
 
@@ -68,8 +68,8 @@ production:
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: sql2285640
-  username: sql2285640
-  password: wA5%uF9%
+  database: sql2287529
+  username: sql2287529
+  password: bC5!zA3%
   host: sql2.freemysqlhosting.net
   port: 3306
