@@ -13,10 +13,10 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: sql2287529
-  username: sql2287529
-  password: bC5!zA3%
-  host: sql2.freemysqlhosting.net
+  database: sql7292244
+  username: sql7292244
+  password: WZckEGFqwk
+  host:  sql7.freemysqlhosting.net
   port: 3306
 
 development:
@@ -24,10 +24,10 @@ development:
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: sql2287529
-  username: sql2287529
-  password: bC5!zA3%
-  host: sql2.freemysqlhosting.net
+  database: sql7292244
+  username: sql7292244
+  password: WZckEGFqwk
+  host:  sql7.freemysqlhosting.net
   port: 3306
 
 # Warning: The database defined as "test" will be erased and
@@ -38,10 +38,10 @@ test:
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: sql2287529
-  username: sql2287529
-  password: bC5!zA3%
-  host: sql2.freemysqlhosting.net
+  database: sql7292244
+  username: sql7292244
+  password: WZckEGFqwk
+  host: sql7.freemysqlhosting.net
   port: 3306
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -68,8 +68,8 @@ production:
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: sql2287529
-  username: sql2287529
-  password: bC5!zA3%
-  host: sql2.freemysqlhosting.net
+  database: sql7292244
+  username: sql7292244
+  password: WZckEGFqwk
+  host: sql7.freemysqlhosting.net
   port: 3306
